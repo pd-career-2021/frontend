@@ -1,0 +1,9 @@
+@use '../utilities/variables';
+
+.aside {
+    width: 60px;
+    height: 100vh;
+    position: fixed;
+    background-color: variables.color('dark');
+    z-index: 100;
+}

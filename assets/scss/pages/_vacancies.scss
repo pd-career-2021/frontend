@@ -1,0 +1,42 @@
+@use '../utilities/mixins';
+@use '../utilities/variables';
+
+@forward '../components/vacancy-item';
+@forward '../components/vacancies-options';
+
+.vacancies {
+
+    &__wrapper {
+        @include mixins.flex-box($j: space-between, $g: 80px);
+        padding: 35px 0 55px 0;
+    }
+
+    // Component-styles
+
+    // &__filters {
+    //     @include mixins.flex-box($g: 15px);
+    //     margin-bottom: 30px;
+    // }
+
+    // &__filter {
+    //     padding: 6px 10px;
+    //     background: #fff;
+    //     border-radius: 12px;
+    //     font-size: 20px;
+
+    //     &--button {
+    //         background: variables.color('red');
+    //         color: #fff;
+    //         cursor: pointer;
+    //     }
+    // }
+
+    // &__delete {
+    //     margin-left: 8px;
+    //     cursor: pointer;
+    // }
+
+    // &__list {
+    //     @include mixins.flex-box($d: column, $g: 30px);
+    // }
+}

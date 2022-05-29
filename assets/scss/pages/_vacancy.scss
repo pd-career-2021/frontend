@@ -1,0 +1,156 @@
+@use '../utilities/variables';
+@use '../utilities/mixins';
+
+@forward '../layout/forms';
+@forward '../layout/aside';
+
+@forward '../components/company';
+@forward '../components/button';
+
+.vacancy {
+    &__preview {
+        padding: 70px 0 60px;
+        background-color: variables.color('green-bg');
+    }
+
+    &__wrapper {
+        @include mixins.flex-box($j: space-between, $a: center);
+    }
+
+    // Component-styles
+
+    &__subtitle {
+        &--light {
+            color: #fff;
+        }
+    }
+
+    // &__name {
+    //     margin-bottom: 20px;
+    // }
+
+    // &__pay {
+    //     margin-bottom: 20px;
+    //     color: variables.color('gray');
+    //     font-weight: 700;
+    //     font-size: 32px;
+    //     line-height: 39px;
+    // }
+
+    // &__conditions {
+    //     font-size: 24px;
+    //     line-height: 28px;
+    //     margin-bottom: 35px;
+    // }
+
+    // &__actions {
+    //     @include mixins.flex-box($g: 25px);
+    // }
+
+    &__company {
+        @include mixins.flex-box($d: column, $a: flex-end);
+    }
+
+    &__content {
+        background-color: variables.color('light-bg');
+        padding: 45px 0;
+    }
+
+    // &__chapter {
+    //     margin-bottom: 45px;
+
+    //     &:last-child {
+    //         margin-bottom: 0;
+    //     }
+    // }
+
+    // &__caption {
+    //     font-weight: 600;
+    // }
+
+    // &__description {
+    //     margin-top: 15px;
+    //     margin-left: 45px;
+    //     font-size: 24px;
+    //     line-height: 29px;
+    //     color: variables.color('dark');
+    // }
+
+    &__text {
+        margin-left: 30px;
+        @include mixins.flex-box($g: 8px, $a: center);
+        
+        &::before {
+            content: "-";
+            display: block;
+        }
+
+        &::after {
+            content: ";";
+            display: block;
+            margin-left: -8px;
+        }
+
+        &:last-child::after {
+            content: ".";
+            display: block;
+            margin-left: -8px;
+        }
+    }
+
+    &__skills {
+        margin: 25px 0 25px 45px;
+        @include mixins.flex-box($g: 60px);
+    }
+
+    &__skill {
+        padding: 30px 50px;
+        font-size: 24px;
+        line-height: 28px;
+        color: variables.color('dark');
+        background: #EAF5FD;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, .25);
+        border-radius: 12px;
+    }
+
+    &__connection-wrapper {
+        @include mixins.flex-box();
+    }
+
+    // &__map {
+    //     width: 50%;
+    //     min-height: 100%;
+    //     object-fit: fill;
+    // }
+
+    // &__contacts {
+    //     width: 50%;
+    //     background-color: variables.color('blue');
+    //     padding: 60px 30px 60px 90px;
+    // }
+
+    // &__form {
+    //     margin-top: 20px;
+    //     @include mixins.flex-box($d: column, $g: 10px);
+    //     width: max-content;
+    // }
+
+    // &__socials {
+    //     margin-top: 45px;
+    //     @include mixins.flex-box($g: 5px);
+    // }
+    
+    // &__social {
+    //     background-color: #fff;
+    //     border-radius: 12px;
+        
+    //     @include mixins.flex-box($a: center, $j: center);
+    //     width: 50px;
+    //     height: 50px;
+    // }
+
+    // &__helper {
+    //     margin-top: 15px;
+    //     color: #fff;
+    // }
+}

@@ -1,0 +1,19 @@
+.hidden {
+    display: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    &--fluid {
+        max-width: 100%;
+        margin-left: 60px;
+    }
+
+    &--full {
+        max-width: 100%;
+        margin-left: 60px;
+        padding: 0 70px 0 40px;
+    }
+}

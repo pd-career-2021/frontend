@@ -1,0 +1,94 @@
+@use '../utilities/mixins';
+@use '../utilities/variables';
+
+// Component-styles
+
+// .vacancies-options {
+//     &__location {
+//         margin-bottom: 25px;
+//         @include mixins.flex-box($g: 5px);
+//     }
+
+//     &__city {
+//         font-weight: 700;
+//         font-size: 24px;
+//         color: #fff;
+//         width: calc(100% - 64px);
+//         background-color: variables.color('dark');
+//         padding: 15px 30px;
+//         box-shadow: 0px 0px 10px rgba(0, 0, 0, .25);
+//         border-radius: 16px;
+//         text-align: center;
+//     }
+
+//     &__form {
+//         width: 360px;
+//         color: #000;
+//         padding: 25px;
+//         height: max-content;
+//         background: #fff;
+//         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+//         border-radius: 16px;
+//     }
+
+//     &__title {
+//         font-weight: 700;
+//         font-size: 48px;
+//         margin-bottom: 20px;
+//     }
+
+//     &__field {
+//         @include mixins.flex-box($d: column);
+//         margin-bottom: 20px;
+//     }
+
+//     &__label {
+//         margin-bottom: 10px;
+//         font-weight: 700;
+//         font-size: 24px;
+//     }
+
+//     &__input {
+//         background: #fff;
+//         border: 1px solid #a1a2a6;
+//         border-radius: 12px;
+//         padding: 10px;
+
+//         &--count {
+//             border-color: #a4a5a9;
+//             width: 110px;
+//             height: 30px;
+//             padding: 5px 10px;
+//             text-align: center;
+//         }
+//     }
+
+//     &__radio {
+//         height: 22px;
+//         width: 22px;
+//     }
+
+//     &__checkbox {
+//         height: 22px;
+//         width: 22px;
+//     }
+
+//     &__helper {
+//         margin-top: 10px;
+//         @include mixins.flex-box($j: space-between);
+//     }
+
+//     &__list {
+//         @include mixins.flex-box($d: column, $g: 10px);
+//     }
+
+//     &__item {
+//         font-size: 20px;
+//         @include mixins.flex-box($a: center, $g: 10px);
+//     }
+
+//     &__count {
+//         font-size: 16px;
+//         color: variables.color('gray');
+//     }
+// }

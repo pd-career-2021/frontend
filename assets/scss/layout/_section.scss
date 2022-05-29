@@ -1,0 +1,22 @@
+@use '../utilities/mixins';
+@use '../utilities/variables';
+
+// Component-styles
+
+// .section {
+//     &__header {
+//         padding: 120px 0;
+//         background-color: variables.color('green-bg');
+//     }
+
+//     &__subtitle {
+//         margin-top: 45px;
+//         font-weight: 700;
+//         font-size: 32px;
+//         color: variables.color('gray');
+//     }
+
+//     &__content {
+//         background-color: variables.color('light-bg');
+//     }
+// }
