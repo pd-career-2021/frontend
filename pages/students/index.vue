@@ -30,7 +30,7 @@
     <div class="d-flex">
       <div class="bg-dark-blue pd-practice">
         <h3 class="white">Найти практику</h3>
-        <ul class="list-style-none">
+        <ul class="list-style-none ul-practice">
           <li class="large white m-li">Найти практику</li>
           <li class="large white m-li">Участвовать в мероприятиях</li>
           <li class="large white m-li">Какой-то текст</li>
@@ -39,7 +39,7 @@
       </div>
       <div class="bg-dark pd-practice">
         <h3 class="white">Найти практику</h3>
-        <ul class="list-style-none">
+        <ul class="list-style-none ul-practice">
           <li class="large white m-li">Курсы и карьерные консультации</li>
           <li class="large white m-li">Конструктор резюме</li>
           <li class="large white m-li">Недели карьеры и ярмарки вакансий</li>
@@ -152,7 +152,7 @@ span {
   margin-left: 11vw;
 }
 
-@media (max-width: 360px) {
+@media (max-width: 380px) {
     .line {
         flex-direction: column;
     }
@@ -161,6 +161,11 @@ span {
       margin-top: 10px;
       text-align: center;
     }
+
+    h2 {
+      font-size: 1.2em;
+    }
+    
 }
 
 
@@ -184,6 +189,10 @@ span {
     width: 70%;
     margin-top: 0;
   }
+
+  .ul-practice {
+    padding-left: 2vw;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -192,6 +201,12 @@ span {
       background-position: 60% 0;
       padding: 5vh 5vw 5vh 7vw;
     }
+}
+
+@media (min-width: 2000px) {
+  h2 {
+    font-size: 3em;
+  }
 }
 
 </style>

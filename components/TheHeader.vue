@@ -33,6 +33,23 @@ a {
     padding-left: 70px;
 }
 
+
+
+@media (max-width: 920px) {
+  .main-header {
+      padding: 7vh 0 10vh 17vw;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  a {
+      font-size: 0.5em;
+      line-height: 2vh;
+  }
+}
+
 @media (max-width: 640px) {
   .main-header {
       padding: 5vh 0 7vh 5vw;
@@ -48,18 +65,13 @@ a {
   }
 }
 
-@media (max-width: 920px) {
-  .main-header {
-      padding: 7vh 0 10vh 17vw;
-  }
+@media (min-width: 2000px) {
+    a {
+        font-size: 1.5em;
+    }
 
-  h1 {
-    font-size: 1.5em;
-  }
-
-  a {
-      font-size: 0.5em;
-      line-height: 2vh;
-  }
+    h1 {
+        font-size: 3.5em;
+    }
 }
 </style>
