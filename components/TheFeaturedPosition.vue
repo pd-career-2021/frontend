@@ -49,4 +49,19 @@
 .m-sm {
     margin-left: 1rem;
 }
+
+@media (max-width: 1000px) {
+    .block {
+        width: 45%;
+    }
+}
+
+@media (max-width: 500px) {
+    .block {
+        width: 100%;
+    }
+}
+
+
+
 </style>

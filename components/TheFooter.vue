@@ -20,8 +20,6 @@
 
 <style scoped>
 .footer {
-    width: 100%;
-    /* margin: 5vh 3vw 0; */
     padding: 5vh 1vw 5vh 7vw;
     height: auto; 
     display: flex;
@@ -38,4 +36,20 @@
     width: 30%;
     margin-bottom: 4vh;
 }
+
+@media (max-width: 730px) {
+  .footer-link {
+        width: 50%;
+        margin-bottom: 4vh;
+    }
+}
+
+@media (max-width: 500px) {
+  .footer-link {
+        width: 100%;
+        margin-bottom: 4vh;
+    }
+}
+
+
 </style>

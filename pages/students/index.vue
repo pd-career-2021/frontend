@@ -1,6 +1,7 @@
 <template>
 <div class="app">
-  <TheRightMenu />
+  <div class="mobile-hidden"> <TheRightMenu /></div>
+ 
   
   <TheHeader />
 
@@ -23,24 +24,26 @@
   </div>
 
   <div class="practice">
-    <h2 class="m-3vw dark">Наших партнеров <br><span> болee 350</span></h2>
+    <h2 class="m-3vw dark">Наших партнеров 
+      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      болee 350</h2>
     <div class="d-flex">
       <div class="bg-dark-blue pd-practice">
         <h3 class="white">Найти практику</h3>
         <ul class="list-style-none">
-          <li class="large white">Найти практику</li>
-          <li class="large white">Участвовать в мероприятиях</li>
-          <li class="large white">Какой-то текст</li>
-          <li class="large white">Какой-то текст</li>
+          <li class="large white m-li">Найти практику</li>
+          <li class="large white m-li">Участвовать в мероприятиях</li>
+          <li class="large white m-li">Какой-то текст</li>
+          <li class="large white m-li">Какой-то текст</li>
         </ul>
       </div>
       <div class="bg-dark pd-practice">
         <h3 class="white">Найти практику</h3>
         <ul class="list-style-none">
-          <li class="large white">Курсы и карьерные консультации</li>
-          <li class="large white">Конструктор резюме</li>
-          <li class="large white">Недели карьеры и ярмарки вакансий</li>
-          <li class="large white">Какой-то текст</li>
+          <li class="large white m-li">Курсы и карьерные консультации</li>
+          <li class="large white m-li">Конструктор резюме</li>
+          <li class="large white m-li">Недели карьеры и ярмарки вакансий</li>
+          <li class="large white m-li">Какой-то текст</li>
         </ul>
       </div>
     </div>
@@ -48,10 +51,10 @@
 
   <div class="download featuredPositions">
     <p class="huge mt-0">Скачать документы</p>
-    <ul>
-      <li class="large dark">Скачать документы номер в№13131313 от 2013 года 19 марта</li>
-      <li class="large dark">Скачать документы список 13131313 13131313 1313131313131313</li>
-      <li class="large dark">Скачать документы ещё какой то документ незнаяю названия</li>
+    <ul class="clip-ul">
+      <li class="large dark m-li">Скачать документы номер в№13131313 от 2013 года 19 марта</li>
+      <li class="large dark m-li">Скачать документы список 13131313 13131313 1313131313131313</li>
+      <li class="large dark m-li">Скачать документы ещё какой то документ незнаяю названия</li>
     </ul>
   </div>
 
@@ -73,7 +76,6 @@ export default {
 </script>
 
 <style scoped>
-
 .app {
   margin: 0;
   padding: 0;
@@ -94,21 +96,6 @@ export default {
 .line {
   display: flex;
   justify-content: space-between;
-}
-
-.d-flex {
-  display: flex;
-}
-.wrap {
-  flex-wrap: wrap;
-}
-
-.m0 {
-  margin: 0;
-}
-
-.mt-0 {
-  margin-top: 0;
 }
 
 .new {
@@ -138,25 +125,20 @@ export default {
   list-style: none;
 }
 
-ul {
+.clip-ul {
   list-style-image: url(/backgrounds/Vector.svg);
   margin: 0;
 }
 
-li {
+.m-li {
   margin-bottom: 0.3rem;
 }
 
 .practice {
-  background: url('/backgrounds/pl2.png');
+  background: url('/backgrounds/pl2.png') no-repeat;
   background-size: 100%;
-  width: 100%;
   margin-left: 3vw;
   padding: 5vh 5vw 5vh 3vw;
-}
-
-.m-3vw {
-  margin: 3vw;
 }
 
 .pd-practice {
@@ -168,6 +150,48 @@ li {
 span {
   margin-bottom: 100px;
   margin-left: 11vw;
+}
+
+@media (max-width: 360px) {
+    .line {
+        flex-direction: column;
+    }
+    .new {
+      width: 30%;
+      margin-top: 10px;
+      text-align: center;
+    }
+}
+
+
+@media (max-width: 640px) {
+  .mobile-hidden {
+    display: none;
+  }
+
+  .d-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .practice {
+    background-size: cover;
+    background-position: 60% 0;
+  }
+
+  .pd-practice {
+    padding: 2vh 5vw 5vh;
+    width: 70%;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 1200px) {
+    .practice {
+      background-size: cover;
+      background-position: 60% 0;
+      padding: 5vh 5vw 5vh 7vw;
+    }
 }
 
 </style>
