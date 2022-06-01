@@ -1,11 +1,21 @@
 <template>
 <div class="app">
-  <h1>ваш код может быть здесь. Страница "Партнеры и работодатели"</h1>
+  <PartnersTop />
+  <PartnersMain />
+  <PartnersFooter />
 </div>
 </template>
+
 
 <script>
 export default {
   name: 'IndexPage',
 }
 </script>
+
+<style scoped>
+.app{
+  padding-left: 90px;
+  background-color: #1e1e1e;
+}
+</style>
