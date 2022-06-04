@@ -73,6 +73,7 @@ h1{
 }
 
 .button__edit{
+    cursor: pointer;
     position: absolute;
     width: 350px;
     height: 58px;
