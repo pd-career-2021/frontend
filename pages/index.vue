@@ -28,34 +28,37 @@
       </div>
     </div>
 
-    <div class="our-partners">
+    <div class="main-part">
+      <div class="our-partners">
+
       <div class="our-partners-header">
         <h2>Наши партнёры</h2>
-        <div class="button-see-all">
-          <div class="over"></div>
-          <button>Посмотреть всех</button>
-        </div>
-
-        
-        
+        <span>Партнёры программ</span>
       </div>
 
       <div class="partner-slider">
-        <div class="btn-back">
-          <img src="~/assets/images/back.png" alt="back">
+        <img src="~/assets/images/logo1.png" alt="company logo">
+        <img src="~/assets/images/logo2.png" alt="company logo">
+        <img src="~/assets/images/logo3.png" alt="company logo">
+        <img src="~/assets/images/logo4.png" alt="company logo">
+      </div>
+
+      <div class="slider-additional">
+        <div class="counter">
+          <span>01</span>
+          <span>—</span>
+          <span>05</span>
         </div>
-        <div class="company-logos">
-          <img src="~/assets/images/logo1.png" alt="company logo">
-          <img src="~/assets/images/logo2.png" alt="company logo">
-          <img src="~/assets/images/logo3.png" alt="company logo">
-          <img src="~/assets/images/logo4.png" alt="company logo">
+        
+        <div class="arrows">
+          <img src="~/assets/images/arrow-back.svg" alt="back">
+          <img src="~/assets/images/arrow-forward.svg" alt="forward">
         </div>
-        <div class="btn-forward">
-          <img src="~/assets/images/forward.png" alt="forward">
-        </div>
+
       </div>
       
     </div>
+    
 
     <div class="recommendations">
 
@@ -152,49 +155,38 @@
         <div class="areas-directions">
           <h3>Наши направления</h3>
           <div class="directions">
-            <div class="row">
-              <div>
-                <p>Машиностроение</p>
-              </div>
-              <div>
-                <p>Юриспруденция</p>
-              </div>
-              <div>
-                <p>IT</p>
-               </div>  
+            <div>
+              <p>Машиностроение</p>
             </div>
-
-            <div class="row">
-              <div>
-                <p>Маркетинг</p>
-              </div>
-              <div>
-                <p>Маркетинг</p>
-              </div>
-              <div>
-                <p>Биотех</p>
-              </div>
+            <div>
+              <p>Юриспруденция</p>
             </div>
-
-            <div class="row">
-              <div>
-                <p>Кибербезопасность</p>
-              </div>
-              <div>
-                <p>Юриспруденция</p>
-              </div>
+            <div>
+              <p>IT</p>
+              </div>  
+            <div>
+              <p>Маркетинг</p>
             </div>
-
-            <div class="row">
-              <div>
-                <p>Биотех</p>
-              </div>
-              <div>
-                <p>Кибербезопасность</p>
-              </div>
-              <div>
-                <p>Биотех</p>
-              </div>
+            <div>
+              <p>Маркетинг</p>
+            </div>
+            <div>
+              <p>Биотех</p>
+            </div>
+            <div>
+              <p>Кибербезопасность</p>
+            </div>
+            <div>
+              <p>Юриспруденция</p>
+            </div>
+            <div>
+              <p>Биотех</p>
+            </div>
+            <div>
+              <p>Кибербезопасность</p>
+            </div>
+            <div>
+              <p>Биотех</p>
             </div>
 
           </div>
@@ -215,88 +207,72 @@
     <div class="upcoming-events">
       <div class="events-header">
         <h2>Ближайшие мероприятия</h2>
-        <div class="button-see-all">
-          <div class="over"></div>
-          <button>Посмотреть всех</button>
-        </div>
       </div>
 
       <div class="event-list">
 
         <div class="event-card">
-
-          <div class="event-info">
-
-            <div class="event-time">
-              <p>24</p>
-            </div>
-            <div class="event-text-info">
-              <p>
-                Научный семинар “Технология построения и автоматизации сети знаний
-              </p>
-            </div>
+          <div class="top-gradient">
+            <p>24</p>
           </div>
-          
+          <div class="bottom-gradient">
+            <p>Мисс & Мистер Московский Политех 2022</p>
+          </div> 
         </div>
 
         <div class="event-card">
-
-          <div class="event-info">
-
-            <div class="event-time">
-              <p>24</p>
-            </div>
-            <div class="event-text-info">
-              <p>
-                Научный семинар “Технология построения и автоматизации сети знаний
-              </p>
-            </div>
+          <div class="top-gradient">
+            <p>24</p>
           </div>
-          
+          <div class="bottom-gradient">
+            <p>Турнир по баскетболу 3 на 3 «ВЕСНА 3х3»</p>
+          </div> 
         </div>
 
         <div class="event-card">
-
-          <div class="event-info">
-
-            <div class="event-time">
-              <p>24</p>
-            </div>
-            <div class="event-text-info">
-              <p>
-                Научный семинар “Технология построения и автоматизации сети знаний
-              </p>
-            </div>
+          <div class="top-gradient">
+            <p>24</p>
           </div>
-          
+          <div class="bottom-gradient">
+            <p>Московская предпрофессиональная олимпиада</p>
+          </div> 
         </div>
 
         <div class="event-card">
-
-          <div class="event-info">
-
-            <div class="event-time">
-              <p>24</p>
-            </div>
-            <div class="event-text-info">
-              <p>
-                Научный семинар “Технология построения и автоматизации сети знаний
-              </p>
-            </div>
+          <div class="top-gradient">
+            <p>24</p>
           </div>
-          
+          <div class="bottom-gradient">
+            <p>Открытие Всероссийского Фестиваля студенческого спорта среди женщин</p>
+          </div> 
         </div>
 
       </div>
+
+      <div class="list-additional">
+        <div class="all-btn">
+          <span>Все мероприятия</span>
+        </div>
+
+        <div class="slide-counter">
+          <div class="counter">
+            <span>01</span>
+            <span>—</span>
+            <span>05</span>
+          </div>
+          
+          <div class="arrows">
+            <img src="~/assets/images/arrow-back.svg" alt="back">
+            <img src="~/assets/images/arrow-forward.svg" alt="forward">
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <div class="courses-and-webinars">
       <div class="courses-and-webinars-header">
         <h2>Курсы и вебинары</h2>
-        <div class="button-see-all">
-          <div class="over"></div>
-          <button>Посмотреть всех</button>
-        </div>
       </div>
       <div class="courses-list">
 
@@ -412,13 +388,37 @@
           </div>
         </div>
 
+        
+
+      </div>
+
+      <div class="list-additional">
+        <div class="all-btn">
+          <span>Все мероприятия</span>
+        </div>
+
+        <div class="slide-counter">
+          <div class="counter">
+            <span>01</span>
+            <span>—</span>
+            <span>05</span>
+          </div>
+          
+          <div class="arrows">
+            <img src="~/assets/images/arrow-back.svg" alt="back">
+            <img src="~/assets/images/arrow-forward.svg" alt="forward">
+          </div>
+        </div>
       </div>
 
     </div>
+    </div>
+
+    
 
     <div class="footer">
-      <div class="page-links">
-        <div class="row">
+      <div class="footer-main">
+        <div class="page-links">
           <div>
             <p>Студентам</p>
           </div>
@@ -428,9 +428,6 @@
           <div>
             <p>Партнёры и работодатели</p>
           </div>
-        </div>
-
-        <div class="row">
           <div>
              <p>Вакансии</p>
           </div>
@@ -442,25 +439,38 @@
           </div> 
         </div>
 
-      </div>
+        <div class="additional-links">
+          <div>
+            <p>Министерство науки и высшего образования РФ</p>
+          </div>
+          <div>
+            <p>Министерство просвещения РФ</p>
+          </div>
+          <div class="social-networks">
+            <img src="~/assets/images/net1.svg" alt="social network">
+            <img src="~/assets/images/net2.svg" alt="social network">
+            <img src="~/assets/images/net3.svg" alt="social network">
+            <img src="~/assets/images/net4.svg" alt="social network">
+            <img src="~/assets/images/net5.svg" alt="social network">
+            <img src="~/assets/images/net6.svg" alt="social network">
+            <img src="~/assets/images/net7.svg" alt="social network">
+          </div>
+          <div>
+            <p>© 2022 Московский политехнический университет</p>
+          </div>
 
-      <div class="additional-links">
-        <p>FAQ</p>
-        <p>Правила конфиденциальности</p>
-      </div>
-      
-      <div class="copyright">
-        <p>© 2022 Московский политехнический университет</p>
-        <div class="social-networks">
-          <p>Иконки соц сетей</p>
-          <p>Иконки соц сетей</p>
-          <p>Иконки соц сетей</p>
-          <p>Иконки соц сетей</p>
+
         </div>
+
       </div>
+    
+      
+      
+      
+      
       
 
-    </div>
+    </div> 
 
   </div>
 
@@ -508,14 +518,31 @@ export default {
     display:flex;
   }
   .sidebar{
-    width:90px;
-    /* min-height: 100vh; */
-    background: #434343;
+    position:fixed;
+    height: 100%;
+    width:60px;
+    background: #1E1E1E;
   }
+  
   .main{
+    /* margin-left:60px; */
     width:100%;
+    background: #F7F7F7;
   }
 
+  /* @media screen and (max-width:991px) {
+    .sidebar{
+      width:48px;
+    }
+    .main{
+      margin-left:48px;
+    }
+  } */
+  /* @media (min-width: 640px) and (max-width: 893px){
+
+  } */
+
+  /* Главный баннер */
   .welcome-banner{
     display: flex;
     background: url('~assets/images/WelcomeBanner.jpg');
@@ -531,7 +558,7 @@ export default {
   .welcome-info h1{
     font-weight: 700;
     font-size: 64px;
-    color: #434343;
+    color: #1E1E1E;
     line-height: 77px;
     margin-bottom: 45px;
   }
@@ -552,137 +579,162 @@ export default {
   .auth p{
     font-weight: 700;
     font-size: 48px;
-    color: #434343;
+    color: #1E1E1E;
   }
 
+  /* @media screen and (max-width:991px){
+    .welcome-info{
+      margin-left:100px;
+    }
+    .auth{
+      margin-right: 70px;
+    }
+  } */
+
+  /* Блок "для-кого" */
   .whom-block{
+    margin-top:-5%;
     display:flex;
     height:308px;
+    justify-content: center;
   }
   .to-students{
-    background:#689EEB;
-    flex-grow: 1;
+    background:#1E1E1E;
   }
   .to-partners{
-    background: #ECECEC;
-    flex-grow: 1;
+    background: #4B6EB9;
+  }
+  .to-students, .to-partners{
+    flex-basis: 35%;
+    max-width: 636px;
+    display:flex;
+    flex-direction: column;
   }
   .to-students h3, .to-partners h3{
+    margin-top:50px;
+    margin-left:50px;
     font-weight: 600;
     font-size: 40px;
-    color: #434343;
-    margin-top:80px;
-    margin-left:72px;
+    color: #FFFFFF;
   }
   .to-students p, .to-partners p{
-    max-width:770px;
-    margin-left:104px;
-    margin-top:46px;
+    margin:40px 28px auto 53px;
     font-weight: 600;
     font-size: 24px;
     line-height: 29px;
-    color: #434343;
+    color: #FFFFFF;
   }
 
-  /* .our-partners{
-
+  /* @media screen and (max-width:991px){
+    .whom-block{
+      height:333px;
+    }
+    .to-students h3, .to-partners h3{
+      margin-left: 40px;
+      margin-top:40px;
+    }
+    .to-students p, .to-partners p{
+      margin:30px 28px auto 43px;
+    }
   } */
+
+  /* Обертка */
+  .main-part{
+    margin:141px 5% 112px 144px;
+  }
+
+  /* Блок "Наши партнеры" */
+
   .our-partners-header{
     display:flex;
+    align-items: center;
+    justify-content: space-between;
   }
   .our-partners-header h2{
     font-weight: 700;
     font-size: 48px;
     line-height: 58px;
-    color: #434343;
-    margin-top:66px;
-    margin-left:72px;
+    color: #1E1E1E;
   }
-  .button-see-all{
-    display:flex;
-  }
-  .our-partners-header .button-see-all{
-    margin-top:66px;
-    margin-left: 20px;
-  }
-  .events-header .button-see-all{
-    margin-left:35px;
-  }
-  .courses-and-webinars-header .button-see-all{
-    margin-left: 20px;
-  }
-  .button-see-all .over{
-    width: 12px;
-    height: 60px;
-    background: #689EEB;
-    border-radius: 12px;
-  }
-  .button-see-all button{
-    width: 210px;
-    height: 60px;
+  .our-partners-header span{
+    align-self: center;
+    height:24px;
+    text-transform: uppercase;
     font-weight: 700;
     font-size: 20px;
-    background: none;
-    border:none;
+    color: #1E1E1E;
+    border-bottom:3px solid #1E1E1E;
   }
-
   .partner-slider{
-    width:100%;
-    height: 200px;
-    margin-top:41px;
-    display:flex;
-    align-items: center;
+    margin-top:45px;
+    display: flex;
+    justify-content: space-around;
   }
-  .partner-slider .btn-back{
-    margin-left:111px;
-    margin-right:94px;
+  .partner-slider img{
+    width:280px;
+    height: 160px;
+  }
+  .slider-additional{
     display: flex;
     align-items: center;
-  }
-  .company-logos{
-    display: flex;
-    width:80%;
     justify-content: space-between;
+    margin-top:40px;
   }
-  .partner-slider .btn-forward{
-    margin-left:94px;
-    margin-right:194px;
+  .slider-additional .counter{
+    align-self: center;
+  }
+  .slider-additional .counter span{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #1E1E1E;
+  }
+  .slider-additional .counter span:last-child{
+    color:#9AA199;
+  }
+  .slider-additional .arrows{
+    align-self: center;
+  }
+  .slider-additional .arrows img:first-child{
+    margin-right: 20px;
   }
 
+  /* @media screen and (max-width:991px){
+    .our-partners{
+      margin:100px 70px auto 70px;
+    }
+  } */
+  
 
+  /* Блок "Рекомендации" */
   .recommendations{
     display: flex;
-    margin-top:91px;
-    margin-left: 72px;
+    justify-content: center;
+    margin-top:104px;
   }
 
   .recommended-positions{
     width: 626px;
     height: 757px;
-    background: #F7F7F7;
+    background: #EEEEEE;
     margin-right: 20px;
     
   }
-  .areas{
-    width: 950px;
-    height: 757px;
-    background: #F7F7F7;
-  }
   .recommended-positions-header{
     display:flex;
+    flex-grow: 1;
   }
   .recommended-positions h3{
     font-weight: 700;
     font-size: 24px;
-    color: #434343;
+    color: #1E1E1E;
     margin-top: 40px;
-    margin-left: 60px;
+    margin-left: 40px;
   }
   .recommended-positions .new{
     width: 140px;
     height: 35px;
     background: #FEA770;
-    border-radius: 6px;
     display: flex;
     justify-content: center;
     margin-left: auto;
@@ -699,28 +751,24 @@ export default {
     margin-bottom: 28px;
   }
   .vacancies{
-    margin-top: 36px;
-    margin-left:90px;
+    margin: 36px 70px auto 70px;
   }
   .card{
     max-width: 400px;
     height: 142px;
     background: #FFFFFF;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-    border-radius: 16px;
     display: flex;
   }
   .marker-red{
     width: 24.8px;
     height: 142px;
     background: #FE877D;
-    border-radius: 16px 0px 0px 16px;
   }
   .marker-blue{
     width: 24.8px;
     height: 142px;
     background: #09AE9C;
-    border-radius: 16px 0px 0px 16px;
   }
   .card-info, .card-info-basic, .card-vacancy-info, .card-info-additional{
     display:flex;
@@ -748,13 +796,13 @@ export default {
     height: 50px;
     font-weight: 700;
     font-size: 20px;
-    color: #434343;
+    color: #1E1E1E;
     margin-bottom:9px;
   }
   .card-info-basic p{
     font-weight: 400;
     font-size: 16px;
-    color: #689EEB;
+    color: #874BA0;
   }
   .card-info-additional{
     margin-left:20px;
@@ -763,7 +811,7 @@ export default {
   .vacancy-direction{
     font-weight: 400;
     font-size: 16px;
-    color: #434343;
+    color: #1E1E1E;
   }
   .vacancy-time{
     font-weight: 400;
@@ -777,67 +825,86 @@ export default {
   .vacancies-button button{
     width: 400px;
     height: 74px;
-    background: #7BBDEC;
+    background: #4B6EB9;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-    border-radius: 12px;
     border:none;
     font-weight: 600;
     font-size: 24px;
     color: #FFFFFF;
   }
+
+  .areas{
+    max-width: 800px;
+    background: #EEEEEE;
+    padding-bottom: 53px;
+  }
   .areas-directions{
-    margin: 40px auto auto 60px;
+    margin: 30px auto auto 30px;
   }
   .areas-directions h3{
     font-weight: 700;
     font-size: 24px;
-    color: #434343;
+    color: #1E1E1E;
     margin-bottom: 54px;
   }
   .directions{
     display: flex;
-    flex-direction: column;
-    margin-left:30px;
+    margin-left:10px;
+    flex-wrap: wrap;
   }
-  .directions .row {
-    display: flex;
-    margin-bottom: 32px;
-  }
-  .directions .row:last-child{
-    margin-bottom: 43px;
-  }
-  .directions .row > div{
-    /* height: 92px; */
-    /* max-width: 318px; */
+  .directions > div{
     background: #EAF5FD;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-    border-radius: 12px;
-    padding:35px 46px;
+    padding:35px 36px;
     text-align: center;
-    margin-right: 40px;
+    margin-right: 30px;
+    margin-bottom: 32px;
   }
-  .directions .row div p{
+  .directions div p{
     font-weight: 400;
     font-size: 20px;
-    color: #434343;
+    color: #1E1E1E;
   }
   .directions-button{
-    margin-left: 190px;
+    display:flex;
+    justify-content: center;
   }
   .directions-button button{
     width: 400px;
     height: 74px;
-    background: #7BBDEC;
+    background: #4B6EB9;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-    border-radius: 12px;
     font-weight: 600;
     font-size: 24px;
     color: #FFFFFF;
     border:none;
   }
 
+  
+  /* @media screen and (max-width:991px){
+    .recommendations{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .recommended-positions{
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+    .areas{
+      width:800px;
+    }
+    .areas-directions{
+      margin: 40px 40px auto 40px;
+    }
+    .directions{
+      margin-left:10px;
+    }
+  } */
+
+  /* Ближайшие мероприятия */
   .upcoming-events{
-    margin:101px auto auto 72px;
+    margin-top:101px;
   }
   .events-header{
     display: flex;
@@ -845,67 +912,104 @@ export default {
   .events-header h2{
     font-weight: 700;
     font-size: 48px;
-    color: #434343;
+    color: #1E1E1E;
   }
   .event-list{
     display:flex;
-    margin-top:63px;
+    margin-top:33px;
+    justify-content: space-between;
   }
   .event-card{
     display:flex;
-    flex-direction: column;
-    width: 351px;
-    height: 380px;
-    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.25));
-    border-radius: 16px;
-    margin-right: 64px;
+    flex-wrap: wrap;
+    align-content: space-between;
+    width:336px;
+    /* max-width:396px; */
+    height:487px;
+    /* margin-right:4px; */
   }
   .event-card:nth-child(1){
-    background: url('~assets/images/event1.png') no-repeat center;
+    background: url('~/assets/images/event1.png');
   }
   .event-card:nth-child(2){
-    background: url('~assets/images/event2.png') no-repeat center;
+    background: url('~/assets/images/event2.png');
   }
   .event-card:nth-child(3){
-    background: url('~assets/images/event3.png') no-repeat center;
+    background: url('~/assets/images/event3.png');
   }
   .event-card:nth-child(4){
-    background: url('~assets/images/event4.png') no-repeat center;
+    background: url('~/assets/images/event4.png');
   }
-  .event-info{
-    display: flex;
-    flex-direction: column;
+  .top-gradient{
+    align-self: flex-start;
+    width: 100%;
+    height: 130px;
+    background: linear-gradient(180deg, #1E1E1E 0%, rgba(30, 30, 30, 0) 100%);
   }
-  .event-time{
-    width: 62px;
-    height: 45px;
-    background: #FFFFFF;
-    border-radius: 0px 16px 16px 0px;
-    display:flex;
-    justify-content: end;
-    margin-top:39px;
+  .bottom-gradient{
+    align-self: flex-end;
+    width: 100%;
+    height: 130px;
+    background: linear-gradient(0deg, #1E1E1E 0%, rgba(30, 30, 30, 0) 100%);
   }
-  .event-time p{
+  .top-gradient p{
+    margin-top:50px;
+    margin-left: 50px;
     font-weight: 700;
     font-size: 36px;
-    color: #434343;
-    margin-right: 7px;
-  }
-  .event-text-info{
-    height: 135px;
-    background: #7BBDEC;
-    border-radius: 0px 0px 16px 16px;
-    margin-top:161px;
-  }
-  .event-text-info p{
-    font-weight: 400;
-    font-size: 20px;
+    line-height: 44px;
     color: #FFFFFF;
-    margin:20px;
+  }
+  .bottom-gradient p{
+    margin:30px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
   }
 
+  .list-additional{
+    display: flex;
+    margin-top:40px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .all-btn{
+    align-self: center;
+  }
+  .all-btn span{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #1E1E1E;
+    border-bottom: 3px solid #1E1E1E;
+  }
+  .list-additional .slide-counter{
+    display:flex;
+  }
+  .list-additional .counter{
+    margin-right: 40px;
+    align-self: center;
+  }
+  .list-additional .counter span{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #1E1E1E;
+  }
+  .list-additional .counter span:last-child{
+    color:#9AA199;
+  }
+  .list-additional .arrows{
+    align-self: center;
+  }
+  .list-additional .arrows img:first-child{
+    margin-right: 20px;
+  }
+  
+  /* Блок "Курсы и вебинары" */
   .courses-and-webinars{
-    margin:101px auto auto 72px;
+    margin-top:101px;
   }
   .courses-and-webinars-header{
     display:flex;
@@ -913,23 +1017,27 @@ export default {
   .courses-and-webinars-header h2{
     font-weight: 700;
     font-size: 48px;
-    color: #434343;
+    color: #1E1E1E;
   }
   .courses-list{
     margin-top:68px;
     display:flex;
+    justify-content: space-between;
   }
   .course-card{
-    margin-right:64px;
-    width: 351px;
+    /* margin-right:34px; */
+    width: 290px;
     height: 380px;
     display:flex;
     flex-direction: column;
     background: #FFFFFF;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-    border-radius: 16px;
+    border-radius: 0px;
     z-index: 1;
   }
+  /* .course-card:last-child{
+    margin-right:0;
+  } */
   .for-appendix{
     display:flex;
     justify-content: flex-end;
@@ -987,74 +1095,53 @@ export default {
     color: #9AA199;
   }
 
+  /* Футер */
   .footer{
-    margin-top:81px;
-    background: #434343;
-    display: flex;
-    flex-direction: column;
+    background: #1E1E1E;
+    height: 442px;
+  }
+  .footer-main{
+    margin: 64px auto 75px 144px;
+    padding-top: 64px;
   }
   .page-links{
-    display:flex;
-    width:70%;
-    flex-direction: column;
-    padding-top:64px;
-    margin-left: 96px;
-  }
-  .page-links .row{
-    display: flex;
-    justify-content: space-between;
-  }
-  .page-links .row:first-child{
-    margin-bottom: 61px;
-  }
-  .page-links .row div{
-    display: flex;
-    justify-content: start;
-  }
-  .page-links p{
-    font-weight: 700;
-    font-size: 32px;
-    color: #FFFFFF;
-    flex-basis: content;
-  }
-  .additional-links{
-    display: flex;
-    margin:61px auto auto 41px;
-  }
-  .additional-links p{
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 29px;
-    color: #FFFFFF;
-  }
-  .additional-links p:first-child{
-    margin-right:111px;
-  }
-  .copyright{
-    margin-top: 22px;
-    margin-bottom: 41px;
-    display: flex;
-    width:100%;
-  }
-  .copyright p{
-    font-weight: 700;
-    font-size: 24px;
-    color: #9AA199;
-    margin-left:41px;
-    align-self: flex-end;
-  }
-  .social-networks{
-    margin-left:auto;
-    margin-right:30px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 16px;
+    grid-template-columns: repeat(3, 324px);
+    grid-template-rows: repeat(2, 24px);
+    grid-row-gap: 50px;
   }
-  .social-networks p{
+  .page-links > div p{
     font-weight: 700;
-    font-size: 24px;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+  }
+  
+  .additional-links{
+    margin-top:97px;
+    margin-right: 70px; 
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-column-gap: 50px;
+    grid-template-rows: repeat(2, 1fr);
+    grid-row-gap: 39px;
+  }
+  .additional-links > div p{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
     color: #9AA199;
   }
+  
+  .social-networks{
+    display:grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-column-gap: 19px;
+    justify-items: center;
+  }
+  .social-networks img:last-child{
+    margin-right: 0;
+  }
+  
 
 </style>
