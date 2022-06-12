@@ -9,7 +9,7 @@
           </div>
           <p class="block__desc">Какой-то текст</p>
       </div>
-      <div>
+      <div class="wrapper__company">
       <button class="button__edit">
           Редактировать
       </button>
@@ -38,7 +38,7 @@
   position: relative;
   height: 100%;
   width: 100%;
-  background: url('~@/assets/images/top.png') no-repeat right 30% top 0%;
+  background: url('~@/assets/images/polikek.png') no-repeat right 30% top 0%;
   background-size: cover;
 }
 .block__text{
@@ -50,7 +50,7 @@ h1{
   font-weight: 700;
   margin-bottom: 12px;
   font-size: 64px;
-  color: #434343;
+  color: #FFFFFF;;
 }
 .geo__block{
     display: flex;
@@ -64,12 +64,12 @@ h1{
     font-size: 16px;
     margin: 0 9px;
     width: 290px;
-    color: #874BA0;
+    color:#FFFFFF ;
 }
 .block__desc{
   margin: 15px 0px;
   font-size: 32px;
-  color: #434343;
+  color: #FFFFFF;
 }
 
 .button__edit{
@@ -83,7 +83,8 @@ h1{
     background: #FFFFFF;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
     font-size: 32px;
-    color: #9AA199;
+    color: #1E1E1E;
+
     font-weight: 700;
 }
 .block__company{
@@ -110,11 +111,11 @@ h1{
 .company__desc{
     position: absolute;
     font-size: 20px;
-    color: #9AA199;
+    color: #FFFFFF;;
     font-weight: 700;
     right: 0;
 }
-@media (max-width: 1000px) {
+@media (max-width: 980px) {
     .button__edit{
       position: absolute;
       width: 60%;
@@ -146,22 +147,39 @@ h1{
 
 }
 @media (max-width: 600px) {
+    .wrapper__company{
+        width: 100%;
+    }
    h1{
        font-size: 42px;
    }
-   .button__edit{
-       font-size: 20px;
+   .company__desc{
+       text-align: center;
+       width: 100%;
    }
    .geo__text{
        width: 80%;
        word-wrap: break-word;
    }
+   .logo__company{
+    margin-left: auto;
+    margin-right: auto;
+   }
+   .block__company{
+    margin-left: auto;
+    margin-right: auto;
+    right: 0;
+    left: 0;
+   }
    .block__desc{
        font-size: 20px;
    }
     .button__edit{
+      position: relative;
+      font-size: 20px;
       width: 80%;
       height: 10%;
+      left: 10%;
 }
 }
 

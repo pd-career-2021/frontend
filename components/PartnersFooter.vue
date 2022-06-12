@@ -28,7 +28,13 @@
                         <p class="footer__copyright">© 2022 Московский политехнический университет</p>
                     </div>
                     <div class="footer__socials">
-                        Иконки соц.сетей Иконки соц.сетей Иконки
+                        <img class="doc-img" src="~@/assets/images/letter.png" alt="">
+                        <img class="doc-img" src="~@/assets/images/vk.png" alt="">
+                        <img class="doc-img" src="~@/assets/images/youtube.png" alt="">
+                        <img class="doc-img" src="~@/assets/images/r.png" alt="">
+                        <img class="doc-img" src="~@/assets/images/smth.png" alt="">
+                        <img class="doc-img" src="~@/assets/images/odnoklasniki.png" alt="">
+                        <img class="doc-img" src="~@/assets/images/telegram.png" alt="">
                     </div>
                 </div>
 
@@ -38,12 +44,20 @@
 </template>
 
 <style scoped>
+.doc-img{
+    margin-right: 15px;
+    cursor: pointer;
+}
+.footer__submenu{
+    margin-top: 30px;
+}
 .footer__socials{
-    margin-top: 60px;
+   
+    margin-top: 30px;
 }
 .footer__bottom{
     display: grid;
-    grid-template-columns: 70% 20%;
+    grid-template-columns: 70% 30%;
     margin-top: 60px;
 }
 .footer__copyright, .footer__socials{
@@ -53,9 +67,7 @@
     color: #9AA199;
 
 }
-.footer__copyright{
-    margin-top: 50px;
-}
+
 .footer__link-small{
     padding-bottom: 30px;
     margin-right: 110px;
@@ -106,7 +118,7 @@ ul{
         flex-direction: column;
     }
     .wrapper__footer{
-      height: 672px;
+      height: 772px;
    }
 }
 @media (max-width: 830px) {
@@ -126,6 +138,30 @@ ul{
          grid-template-columns: repeat(1, 90%);
      }
    
+}
+@media (max-width: 600px) {
+    .footer__link-small, .footer__copyright{
+        font-size: 17px;
+    }
+    .doc-img{
+        margin-bottom: 10px;
+    }
+  .footer__submenu{
+    margin-left: 40px;
+    width: 100%;
+  }
+  .footer__socials{
+    width: 100%;
+    margin-top: 10px;
+    margin-left: 40px;
+}
+.footer__bottom{
+    margin-top: 0;
+}
+ .wrapper__footer{
+      height: 932px;
+   }
+
 }
 
 </style>

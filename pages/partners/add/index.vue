@@ -17,4 +17,10 @@ export default {
   padding-left: 90px;
   background-color: #1e1e1e;
 }
+
+@media (max-width: 600px) {
+  .app{
+    padding-left: 0;
+  }
+}
 </style>

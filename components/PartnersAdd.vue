@@ -32,7 +32,24 @@
         </form>
         <h4 class="title_socials">Вы можете указать свои социальные сети</h4>
         <div class="block__socials">
-             позже добавлю сюда иконки
+             <div class="socials__item">
+                <img class="soc-img" src="~@/assets/images/VK-add.png" alt="">
+             </div>
+             <div class="socials__item">
+                <img class="soc-img" src="~@/assets/images/email.png" alt="">
+             </div>
+             <div class="socials__item">
+                <img class="soc-img" src="~@/assets/images/google.png" alt="">
+             </div>
+             <div class="socials__item">
+                <img class="soc-img" src="~@/assets/images/VK-add.png" alt="">
+             </div>
+             <div class="socials__item">
+                <img class="soc-img" src="~@/assets/images/email.png" alt="">
+             </div>
+             <div class="socials__item">
+                <img class="soc-img" src="~@/assets/images/google.png" alt="">
+             </div>
         </div>
     </div>
     <div class="block__down">
@@ -41,6 +58,26 @@
 </template>
 
 <style scoped>
+.soc-img{
+    display: block; 
+    margin-top: 15px;
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 50px;
+    height: 50px;
+}
+.socials__item{
+    margin-right: 10px;
+    height: 80px;
+    width: 80px;
+    background-color: #FFFFFF;
+}
+.block__socials{
+    grid-template-columns: repeat(7, 1fr);
+    display: grid;
+    width: 30%;
+    margin-left: 72px;
+}
 .title_socials{
     margin-left: 72px;
     font-weight: 600;
@@ -104,7 +141,7 @@
     box-sizing: border-box;
     padding-left: 72px;
     width: 100%;
-    height: 560px;
+    height: 590px;
     background: #EEEEEE;
 
 }
@@ -169,7 +206,7 @@ h2{
   position: relative;
   height: 100%;
   width: 100%;
-  background: url('~@/assets/images/top.png') no-repeat right 30% top 0%;
+  background: url('~@/assets/images/polikek.png') no-repeat right 30% top 0%;
   background-size: cover;
 }
 .block__text{
@@ -181,12 +218,13 @@ h1{
   font-weight: 700;
   margin-bottom: 12px;
   font-size: 64px;
-  color: #434343;
+  color: #FFFFFF;
+;
 }
 .block__desc{
   margin: 45px 0px;
   font-size: 32px;
-  color: #434343;
+  color: #FFFFFF;
 }
 
 .button__edit{
@@ -200,7 +238,7 @@ h1{
     background: #FFFFFF;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
     font-size: 32px;
-    color: #9AA199;
+    color: #1E1E1E;
     font-weight: 700;
 }
 .block__company{
@@ -212,7 +250,7 @@ h1{
 }
 @media (max-width: 1180px) {
     .block__down{
-        height: 730px;
+        height: 790px;
     }
     .block__flex-item1, .block__flex-item2{
         flex-direction: column;
@@ -225,8 +263,12 @@ h1{
         padding-left: 10px;
         
     }
+ 
+    .block__socials, h2{
+        margin-left: 55px;
+    }
     .title_socials{
-        
+        margin-left: 55px;
         font-size: 18px;
     }
      .flex__item3{
@@ -253,7 +295,7 @@ h1{
       width: 60%;
       height: 10%;
       top: 259px;
-      left: 12%;
+      left: 10%;
       font-size: 23px;
 }
 .block__company{
@@ -265,9 +307,33 @@ h1{
 }
 
 }
+@media (max-width: 800px) {
+    .block__down{
+        height: 860px;
+    }
+   .block__socials{
+       grid-template-columns: repeat(4, 1fr);
+       row-gap: 10px;
+   }
+}
+@media (max-width: 420px) {
+    .block__down{
+        height: 860px;
+    }
+   .block__socials{
+       grid-template-columns: repeat(3, 1fr);
+       row-gap: 10px;
+   }
+}
+
 @media (max-width: 600px) {
-    .title_socials{
-        margin-left: 20px;
+     .block__down{
+        height: 950px;
+    }
+   
+    .title_socials,.block__socials{
+        margin-left: 30px;
+        padding-right: 20px;
     }
    h1{
        font-size: 42px;

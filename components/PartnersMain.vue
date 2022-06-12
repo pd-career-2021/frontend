@@ -233,7 +233,7 @@ h3{
     height: 630px;
 }
 .block-1{
-    padding-top: 40px;
+    padding-top: 20px;
     margin-left: 72px;
     margin-top: 70px;
     width: 82.5%;
@@ -246,7 +246,7 @@ h3{
 .block-2{
     margin-left: 72px;
     margin-top: 70px;
-    padding-top: 40px;
+    padding-top: 20px;
     width: 82.5%;
     position: relative;
     box-sizing: border-box;
@@ -260,7 +260,6 @@ h3{
     font-size: 5vh;
     line-height: 44px;
     color: #1E1E1E;
-    margin: 0px 60px;
 }
 .block__docs{
     margin-top: 32px;
@@ -270,6 +269,12 @@ h3{
 }
 
 @media (max-width: 1068px) {
+    h2{
+        left: 12px;
+    }
+    .block__employee{
+        padding-left: 0;
+    }
     .block__docs{
         padding-right: 20px;
     }
@@ -285,22 +290,26 @@ h3{
         padding-left: 0;
     }
     .block__image, .info{
-        width: 80%;
+        width: 95%;
         margin: 10px auto;
     }
     .employee__flex{
-        width: 92%;
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
     }
     .title__my{
         line-height: 29px;
         font-size: 3vh;
     }
     .block-1{
+        width: 95%;
         height: 29%;
         margin-left: auto;
         margin-right: auto;
     }
      .block-2{
+        width: 95%;
         height: 49%;
         margin-left: auto;
         margin-right: auto;
@@ -310,6 +319,13 @@ h3{
    
 }
 @media (max-width: 528px) {
+   
+    .block__vacancy, .block__request{
+        padding-left: 10px;
+    }
+    .block__link a{
+        font-size: 2.7vh;
+    }
     .block__documents{
     height: 1330px;
   }
@@ -331,7 +347,7 @@ h3{
         margin-left: auto;
     }
     .employee__flex .title__vacancy{
-        font-size: 28px;
+        font-size: 25px;
         line-height: 29px;
         margin: 0;
     }
@@ -347,11 +363,12 @@ h3{
        height: 410px;
    }
    .info__know{
+       height: 160px;
        margin-bottom: 10px;
    }
    .button__know{
        width: 80%;
-       bottom: 5px;
+       bottom: 10px;
        margin: 0 auto;
        font-size: 15px;
    }
@@ -385,4 +402,6 @@ h3{
         font-size: 20px;
     }
 }
+
+
 </style>
