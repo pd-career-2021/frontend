@@ -6,7 +6,7 @@
     </a>
     <a :href="company.link" target="_blank" class="company__name">{{ company.name }}
         <svg width="17" height="13" viewBox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M16 1L5.6875 12L1 7" stroke="#689EEB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16 1L5.6875 12L1 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
     </a>
     <p class="company__address">
@@ -31,44 +31,3 @@ export default {
     }
 }
 </script>
-
-<style scoped>
-    .company__label {
-        font-weight: 700;
-        font-size: 20px;
-        line-height: 24px;
-        color: #9aa199;
-        margin-bottom: 10px;
-    }
-
-    .company__logo {
-        height: 230px;
-        width:  230px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 20px;
-        
-        background: #FFFFFF;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-        border-radius: 12px;
-    }
-
-    .company__name {
-        font-weight: 700;
-        font-size: 20px;
-        line-height: 24px;
-        color: #689eeb;
-        display: flex;
-        align-items: center;
-        gap: 5px;
-    }
-
-    .company__address {
-        margin-top: 45px;
-        display: flex;
-        align-items: center;
-        gap: 5px;
-        color: #689eeb;
-    }
-</style>

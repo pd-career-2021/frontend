@@ -1,21 +1,23 @@
 <template>
     <ul class="vacancies__list">
-        <VacanciesItem v-for="vacancy in vacancies" :key="vacancy.id" :vacancy="vacancy"/>
+        <VacanciesItem @toggle-favorite="toggleFavoriteState" v-for="vacancy in vacancies" :key="vacancy.id" :vacancy="vacancy"/>
     </ul>
 </template>
 
 <script>
+import VacanciesItem from '~/components/vacancies/VacanciesItem';
+
 export default {
+    components: {
+        VacanciesItem
+    },
     props: {
         vacancies: Array
+    },
+    methods: {
+        toggleFavoriteState(id) {
+            this.$emit('toggle-favorite', id);
+        }
     }
 }
 </script>
-
-<style scoped>
-    .vacancies__list {
-        display: flex;
-        gap: 30px;
-        flex-direction: column;
-    }
-</style>

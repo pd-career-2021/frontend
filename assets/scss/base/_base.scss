@@ -15,6 +15,14 @@ body {
     color: variables.color('dark');
 }
 
+main {
+    margin-left: 60px;
+
+    @media (max-width: 576px) {
+        margin-left: 0;
+    }
+}
+
 .layout-enter-active, .layout-leave-active {
     transition: opacity .5s
 }

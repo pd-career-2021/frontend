@@ -1,27 +1,17 @@
 <template>
     <div class="vacancy__chapter">
         <h3 class="vacancy__subtitle">Ключевые навыки</h3>
-        <List :classNames="classNames" :list="skills" />
+        <ul class="vacancy__skills">
+            <li v-for="(skill, i) in skills" :key="i" class="vacancy__skill">{{ skill }}</li>
+        </ul>
     </div>
 </template>
 
 <script>
-import List from '~/components/general/List';
 
 export default {
     props: {
         skills: Array
-    },
-    components: {
-        List
-    },
-    data() {
-        return {
-            classNames: {
-                parent: 'vacancy__skills',
-                children: 'vacancy__skill'
-            }
-        }
     }
 }
 </script>

@@ -4,26 +4,29 @@
 .button {
     display: block;
     border: none;
-    border-radius: 16px;
-    padding: 12px 50px;
+    padding: 18px 36px;
+    text-align: center;
 
     cursor: pointer;
 
-    font-weight: 700;
-    font-size: 32px;
+    font-weight: 600;
+    font-size: 24px;
 
     color: variables.color('white');
     background-color: variables.color('dark');
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+
+    &--blue {
+        background-color: variables.color('blue');
+    }
    
     &--icon {
-        height: 64px;
-        width: 64px;
+        min-height: 64px;
+        min-width: 64px;
         @include mixins.flex-box($a: center, $j: center);
         padding: 0;
     }
 
-    &--active {
-        color: variables.color('gold');
+    &--clear {
+        padding: 0;
     }
 }

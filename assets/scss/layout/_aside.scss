@@ -2,8 +2,12 @@
 
 .aside {
     width: 60px;
-    height: 100vh;
+    height: 100%;
     position: fixed;
     background-color: variables.color('dark');
     z-index: 100;
+
+    @media (max-width: 576px) {
+        display: none;
+    }
 }

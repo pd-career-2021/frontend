@@ -1,47 +1,47 @@
 <template>
-<div class="page">
-    <Aside />
+<div class="app">
+    <AppAside />
     <main>
         <section class="section vacancies">
-            <SectionHeader :titles="titles" />
+            <div class="section__header section__header--fixed">
+                <div class="container">
+                    <h2 class="section__title">Вакансии</h2>
+                    <p class="section__subtitle">Какой-то текст</p>
+                </div>
+            </div>
             <div class="section__content">
-                <div class="container--full">
+                <div class="container">
                     <div class="vacancies__wrapper">
                         <VacanciesOptions @toggle-favorite="toggleFavoriteOptions" :options="options" />
                         <div class="vacancies__catalogue">
-                            <VacanciesFilters @clear-filters="clearFilters" @remove-filter="removeFilter" :filters="filters" />
-                            <VacanciesList :vacancies="vacancies" />
+                            <VacanciesFilters @clear="clearFilters" @remove="removeFilter" :filters="filters" />
+                            <VacanciesList @toggle-favorite="toggleFavoriteVacancy" :vacancies="vacancies" />
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-    <Footer />
+    <AppFooter />
 </div>
 </template>
 
 <script>
-import Aside from '~/components/Aside';
-import Footer from '~/components/Footer';
+import Aside from '~/components/AppAside';
+import Footer from '~/components/AppFooter';
 
-import SectionHeader from '~/components/section/SectionHeader';
+import VacanciesOptions from '~/components/Vacancies/VacanciesOptions';
+import VacanciesFilters from '~/components/Vacancies/VacanciesFilters';
+import VacanciesList from '~/components/Vacancies/VacanciesList';
 
-import VacanciesOptions from '~/components/vacancies/VacanciesOptions';
-import VacanciesFilters from '~/components/vacancies/VacanciesFilters';
-import VacanciesList from '~/components/vacancies/VacanciesList';
 
 export default {
-    name: 'VacanciesPage',
+    name: 'VacancyPage',
     components: {
-        Aside, Footer, SectionHeader, VacanciesOptions, VacanciesFilters, VacanciesList
+        Aside, Footer, VacanciesOptions, VacanciesFilters, VacanciesList
     },
     data() {
         return {
-            titles: {
-                main: 'Вакансии',
-                subtitle: 'Какой-то текст'
-            },
             filters: [
                 { id: 0, body: 'Маркетинг' },
                 { id: 1, body: 'IT-разработка' },
@@ -57,9 +57,13 @@ export default {
                     },
                     link: 'https://google.com',
                     address: 'Москва',
-                    companyName: 'ООО "Гугл"',
+                    company: {
+                        name: 'ООО "Гугл"',
+                        link: 'https://google.com'
+                    },
                     description: 'Арифметическая прогрессия неустойчива. Бесконечно малая величина, конечно, заряжает многомерный цвет. Художественная эпоха свободна. Поверхность, следовательно, свободна. Статус художника, как бы это ни казалось парадоксальным, является следствием. Манерничанье, так или иначе, параллельно...',
-                    pay: '99 000'
+                    pay: '99 000',
+                    isFavorite: false
                 },
                 { 
                     id: 1,
@@ -70,9 +74,13 @@ export default {
                     },
                     link: 'https://google.com',
                     address: 'Москва',
-                    companyName: 'ООО "Гугл"',
+                    company: {
+                        name: 'ООО "Гугл"',
+                        link: 'https://google.com'
+                    },
                     description: 'Арифметическая прогрессия неустойчива. Бесконечно малая величина, конечно, заряжает многомерный цвет. Художественная эпоха свободна. Поверхность, следовательно, свободна. Статус художника, как бы это ни казалось парадоксальным, является следствием. Манерничанье, так или иначе, параллельно...',
-                    pay: '99 000'
+                    pay: '99 000',
+                    isFavorite: true
                 },
                 { 
                     id: 2,
@@ -83,9 +91,13 @@ export default {
                     },
                     link: 'https://google.com',
                     address: 'Москва',
-                    companyName: 'ООО "Гугл"',
+                    company: {
+                        name: 'ООО "Гугл"',
+                        link: 'https://google.com'
+                    },
                     description: 'Арифметическая прогрессия неустойчива. Бесконечно малая величина, конечно, заряжает многомерный цвет. Художественная эпоха свободна. Поверхность, следовательно, свободна. Статус художника, как бы это ни казалось парадоксальным, является следствием. Манерничанье, так или иначе, параллельно...',
-                    pay: '99 000'
+                    pay: '99 000',
+                    isFavorite: false
                 },
                 { 
                     id: 3,
@@ -96,9 +108,13 @@ export default {
                     },
                     link: 'https://google.com',
                     address: 'Москва',
-                    companyName: 'ООО "Гугл"',
+                    company: {
+                        name: 'ООО "Гугл"',
+                        link: 'https://google.com'
+                    },
                     description: 'Арифметическая прогрессия неустойчива. Бесконечно малая величина, конечно, заряжает многомерный цвет. Художественная эпоха свободна. Поверхность, следовательно, свободна. Статус художника, как бы это ни казалось парадоксальным, является следствием. Манерничанье, так или иначе, параллельно...',
-                    pay: '99 000'
+                    pay: '99 000',
+                    isFavorite: false
                 }
             ],
             options: {
@@ -123,13 +139,18 @@ export default {
         clearFilters() {
             this.filters = [];
         },
+        toggleFavoriteVacancy(id) {
+            const index = this.vacancies.findIndex(element => element.id == id);
+            this.vacancies[index].isFavorite = !this.vacancies[index].isFavorite;
+        },
         toggleFavoriteOptions() {
             this.options.isFavorite = !this.options.isFavorite;
+        }
+    },
+    head() {
+        return {
+            title: 'Вакансии'
         }
     }
 }
 </script>
-
-<style>
-
-</style>
