@@ -1,0 +1,51 @@
+@use '../utilities/mixins';
+@use '../utilities/variables';
+
+.section {
+    &__header {
+        padding: 100px 0;
+        background-color: variables.color('dark');
+        color: variables.color('white');
+
+        &--fixed {
+            min-height: 550px;
+
+            @media (max-width: 576px) {
+                min-height: 250px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            padding: 50px 0;
+            text-align: center;
+        }
+    }
+
+    &__title {
+        font-size: 64px;
+
+        @media (max-width: 576px) {
+            font-size: 32px;
+        }
+    }
+
+    &__subtitle {
+        margin-top: 45px;
+        font-weight: 700;
+        font-size: 32px;
+
+        @media (max-width: 576px) {
+            font-size: 24px;
+            margin-top: 25px;
+        }
+    }
+
+    &__content {
+        padding: 70px 0 50px;
+        background-color: variables.color('dark-gray');
+
+        @media (max-width: 576px) {
+            padding: 40px 0 30px;
+        }
+    }
+}
