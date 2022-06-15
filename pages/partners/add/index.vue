@@ -1,8 +1,7 @@
 <template>
 <div class="app">
-  <PartnersTop />
-  <PartnersMain />
-  <PartnersFooter />
+  <PartnersAdd />
+  <PartnersFooter/>
 </div>
 </template>
 
