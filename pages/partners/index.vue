@@ -1,12 +1,11 @@
 <template>
-<div class="app">
-  <TheRightMenu />
-  <PartnersTop />
-  <PartnersMain />
- <AppFooter/>
-</div>
+  <div class="app">
+    <TheRightMenu />
+    <PartnersTop />
+    <PartnersMain />
+    <AppFooter />
+  </div>
 </template>
-
 
 <script>
 export default {
@@ -15,5 +14,7 @@ export default {
 </script>
 
 <style scoped>
-
+.app {
+  background: #f7f7f7;
+}
 </style>
