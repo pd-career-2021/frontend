@@ -1,0 +1,29 @@
+@use '../utilities/variables';
+@use '../utilities/mixins';
+
+.form {
+    &__input {
+        padding: 10px 25px;
+        font-size: 20px;
+
+        border: none;
+        background: variables.color('white');
+        outline: none;
+    
+        width: 380px;
+
+        &::placeholder {
+            color: variables.color('dark');
+        }
+
+        @media (max-width: 576px) {
+            display: block;
+            width: 200px;
+        }
+    }
+
+    &__button {
+        padding: 10px 25px!important;
+        max-width: max-content;
+    }
+}

@@ -1,0 +1,19 @@
+$colors: (
+    'dark': #1e1e1e,
+    'gray': #B8B5BC,
+    'dark-gray': #EEEEEE,
+    'gold': #fbd37d,
+    'black': #000,
+    'white': #fff,
+    'white-bg': #fff,
+    'blue': #4B6EB9,
+    'dark-blue': #874BA0,
+    'red': #FE877D,
+    'green-bg': #ebffF3,
+    'light-bg': #f7f7f7
+
+);
+
+@function color($key: 'black') {
+    @return map-get($colors, $key);
+}
