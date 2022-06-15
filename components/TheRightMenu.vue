@@ -7,7 +7,7 @@
     </div>    
 </template>
 
-<style>
+<style scoped>
 .container {
     background-color: #434343;
     width: 3rem;
