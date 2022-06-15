@@ -58,20 +58,15 @@
     </ul>
   </div>
 
-  <TheFooter />
+  <AppFooter/>
 
 </div>
 </template>
 
 <script>
-import TheNavigation from '../../components/TheNavigation.vue';
-import TheRightMenu from '../../components/TheRightMenu.vue';
-import TheHeader from '../../components/TheHeader.vue';
-import TheFeaturedPosition from '../../components/TheFeaturedPosition.vue';
-import TheFooter from '../../components/TheFooter.vue';
+
 export default {
     name: "IndexPage",
-    components: { TheNavigation, TheRightMenu, TheHeader, TheFeaturedPosition, TheFooter }
 }
 </script>
 

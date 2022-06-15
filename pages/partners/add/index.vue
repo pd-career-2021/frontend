@@ -1,7 +1,8 @@
 <template>
 <div class="app">
+  <TheRightMenu/>
   <PartnersAdd />
-  <PartnersFooter/>
+<AppFooter/>
 </div>
 </template>
 
@@ -13,14 +14,4 @@ export default {
 </script>
 
 <style scoped>
-.app{
-  padding-left: 90px;
-  background-color: #1e1e1e;
-}
-
-@media (max-width: 600px) {
-  .app{
-    padding-left: 0;
-  }
-}
 </style>

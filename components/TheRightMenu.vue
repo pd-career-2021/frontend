@@ -17,7 +17,7 @@
     top: 0;
     left: 0;
     padding-top: 40px;
-
+z-index: 100;
     display: flex;
     flex-direction: column;
     align-items: center;
