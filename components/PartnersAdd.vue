@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="partners_add">
     <div class="top">
     <div class="top__wrapper">
        <div class="block__text">
@@ -58,6 +58,7 @@
 </template>
 
 <style scoped>
+
 .soc-img{
     display: block; 
     margin-top: 15px;

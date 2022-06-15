@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="partners">
     <div class="block__about">
         <h2>О нас</h2>
         <div class="block__info">
@@ -74,6 +74,9 @@
 </template>
 
 <style scoped>
+.partners{
+        padding-left: 90px;
+}
 .doc-img{
     width: 20px;
     height: 20px;
