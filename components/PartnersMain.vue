@@ -50,7 +50,7 @@
     </div>
     <div class="block__documents">
        <div class="block-1">
-            <h3 class="title__my">Мои вакакнсии и стажировки</h3>
+            <h3 class="title__my">Мои вакансии и стажировки</h3>
        </div>
        <div class="block-2">
             <h3 class="title__my">Скачать документы</h3>
