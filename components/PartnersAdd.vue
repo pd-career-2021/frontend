@@ -83,6 +83,8 @@
     font-weight: 600;
     font-size: 24px;
     line-height: 29px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     color: #9AA199;
 }
 .block__flex-item2{
@@ -104,7 +106,7 @@
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
     height: 60px;
     margin-bottom: 40px;
-    width: 63%;
+    width: 55%;
     box-sizing: border-box; 
     margin-left: 72px;
 }
@@ -183,6 +185,7 @@
 }
 .block__about{
     padding-top: 42px;
+    padding-left: 90px;
     position: relative;
     background: #F7F7F7;
     width: 100%;
@@ -249,6 +252,9 @@ h1{
     top: 186px;
 }
 @media (max-width: 1180px) {
+    .block__about{
+        padding-left: 0;
+    }
     .block__down{
         height: 790px;
     }

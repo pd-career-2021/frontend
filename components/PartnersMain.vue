@@ -230,7 +230,7 @@ h3{
     padding-top: 120px;
     background: #F7F7F7;
     width: 100%;
-    height: 630px;
+    height: 740px;
 }
 .block-1{
     padding-top: 20px;

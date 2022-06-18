@@ -63,7 +63,7 @@ h1{
 .geo__text{
     font-size: 16px;
     margin: 0 9px;
-    width: 290px;
+    width: 298px;
     color:#FFFFFF ;
 }
 .block__desc{
