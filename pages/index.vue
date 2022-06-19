@@ -416,7 +416,7 @@
 
     
 
-    <div class="footer">
+    <!-- <div class="footer">
       <div class="footer-main">
         <div class="page-links">
           <div>
@@ -470,7 +470,7 @@
       
       
 
-    </div> 
+    </div>  -->
 
   </div>
 
@@ -530,17 +530,32 @@ export default {
     background: #F7F7F7;
   }
 
-  /* @media screen and (max-width:991px) {
+  @media screen and (max-width: 1025px) and (min-width:850px) {
     .sidebar{
-      width:48px;
+      width:45px;
     }
-    .main{
-      margin-left:48px;
+  }
+  @media screen and (max-width: 850px) and (min-width:650px) {
+    .sidebar{
+      width:60px;
     }
-  } */
-  /* @media (min-width: 640px) and (max-width: 893px){
-
-  } */
+  }
+  @media screen and (max-width: 650px) and (min-width: 500px) {
+    .sidebar{
+      width:52px;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .sidebar{
+      width:40px;
+    }
+  }
+   @media screen and (max-width: 450px) {
+    .sidebar{
+      width:30px;
+    }
+  }
+  
 
   /* Главный баннер */
   .welcome-banner{
@@ -582,20 +597,146 @@ export default {
     color: #1E1E1E;
   }
 
-  /* @media screen and (max-width:991px){
+  @media screen and (max-width: 1025px) and (min-width: 850px) {
+    .welcome-info h1{
+      font-size: 50px;
+    }
+    .welcome-info p{
+      font-size: 26px;
+    }
+    .auth p{
+      font-size: 38px;
+    }
+  }
+   @media screen and (max-width: 850px) and (min-width: 650px) {
+    .welcome-banner{
+      height:442px;
+    }
     .welcome-info{
-      margin-left:100px;
+      margin-top: 60px;
+      margin-left: 120px;
+    }
+    .welcome-info h1{
+      font-size: 40px;
+      margin-bottom: 30px;
+    }
+    .welcome-info p{
+      font-size: 20px;
+    }
+    .auth{
+      margin-right: 80px;
+    }
+    .auth p{
+      font-size: 30px;
+    }
+  }
+  @media screen and (max-width: 650px) and (min-width:550px) {
+    .welcome-info{
+      margin-top: 50px;
+      margin-left: 110px;
+    }
+    .welcome-info h1{
+      font-size: 35px;
+      margin-bottom: 20px;
+    }
+    .welcome-info p{
+      font-size: 18px;
     }
     .auth{
       margin-right: 70px;
+      margin-top:30px;
     }
-  } */
+    .auth p{
+      font-size: 26px;
+    }
+  }
+  @media screen and (max-width:550px) and (min-width:450px){
+    .welcome-info{
+      margin-top: 50px;
+      margin-left: 90px;
+    }
+    .welcome-info h1{
+      font-size: 30px;
+      margin-bottom: 0;
+    }
+    .welcome-info p{
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+    .auth{
+      margin-right:50px;
+      margin-top:30px;
+    }
+    .auth p{
+      font-size: 24px;
+    }
+  }
+  @media screen  and (max-width:450px) and (min-width:400px){
+    .welcome-banner{
+      height: 400px;
+    }
+    .welcome-info{
+      margin-top: 40px;
+      margin-left: 90px;
+    }
+    .welcome-info h1{
+      font-size: 26px;
+      margin-bottom: 0;
+    }
+    .welcome-info p{
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+    .auth{
+      margin-right:40px;
+      margin-top:30px;
+    }
+    .auth p{
+      font-size: 22px;
+    }
+  }
+  @media screen  and (max-width:400px){
+    .welcome-banner{
+      height: 400px;
+    }
+    .welcome-info{
+      margin-top: 40px;
+      margin-left: 70px;
+    }
+    .welcome-info h1{
+      font-size: 24px;
+      margin-bottom: 0;
+    }
+    .welcome-info p{
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+    .auth{
+      margin-right:30px;
+      margin-top:30px;
+    }
+    .auth p{
+      font-size: 20px;
+    }
+  }
+  @media screen and (max-width:320px){
+    .welcome-info{
+      margin-left:50px;
+    }
+    .welcome-info h1{
+      margin-bottom: 15px;
+      line-height: 40px;
+    }
+    .auth{
+      margin-right:20px;
+    }
+  }
 
   /* Блок "для-кого" */
   .whom-block{
     margin-top:-5%;
     display:flex;
-    height:308px;
+    min-height:308px;
     justify-content: center;
   }
   .to-students{
@@ -625,22 +766,100 @@ export default {
     color: #FFFFFF;
   }
 
-  /* @media screen and (max-width:991px){
+  @media screen and (max-width:1200px) and (min-width:960px){
     .whom-block{
-      height:333px;
+      margin-top:-7%;
     }
     .to-students h3, .to-partners h3{
-      margin-left: 40px;
+      margin-top:40px;
+    }
+  }
+   @media screen and (max-width:960px){
+    .whom-block{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: none;
+    }
+    .to-students p, .to-partners p{
+      margin-bottom: 40px;
+    }
+  }
+  @media screen and (max-width:850px){
+    .to-students, .to-partners{
+      max-width:70%;
+    }
+  }
+  @media screen and (max-width:750px){
+    .whom-block{
+      margin-top:-12%;
+    }
+    .to-students h3, .to-partners h3{
+      font-size: 34px;
       margin-top:40px;
     }
     .to-students p, .to-partners p{
-      margin:30px 28px auto 43px;
+      font-size: 20px;
+      margin-top:30px;
+      margin-bottom: 30px;
     }
-  } */
+  }
+  @media screen and (max-width:650px){
+    .whom-block{
+      margin-top:-35%;
+    }
+    .to-students h3, .to-partners h3{
+      font-size: 30px;
+      margin-top:30px;
+      margin-left:30px;
+    }
+    .to-students p, .to-partners p{
+      font-size: 18px;
+      margin-left:33px;
+      margin-top:15px;
+    }
+  }
+  @media screen and (max-width:550px){
+    .whom-block{
+      margin-top:-50%;
+    }
+  }
+  @media screen and (max-width:450px){
+    .whom-block{
+      margin-top:-30%;
+      margin-left:30px;
+    }
+     .to-students h3, .to-partners h3{
+      font-size: 26px;
+    }
+    .to-students p, .to-partners p{
+      font-size: 16px;
+    }
+  }
 
   /* Обертка */
   .main-part{
     margin:141px 5% 112px 144px;
+  }
+  @media screen and (max-width:960px){
+    .main-part{
+      margin:100px 5% 100px 120px;
+    }
+  }
+  @media screen and (max-width:650px){
+    .main-part{
+      margin: 70px 5% 100px 100px;
+    }
+  }
+  @media screen and (max-width:550px){
+    .main-part{
+      margin: 50px 5% 100px 85px;
+    }
+  }
+  @media screen and (max-width:450px){
+    .main-part{
+      margin: 40px 5% 100px 50px;
+    }
   }
 
   /* Блок "Наши партнеры" */
@@ -671,8 +890,10 @@ export default {
     justify-content: space-around;
   }
   .partner-slider img{
-    width:280px;
-    height: 160px;
+    max-width:280px;
+    max-height: 160px;
+    width:auto;
+    height: auto;
   }
   .slider-additional{
     display: flex;
@@ -699,11 +920,136 @@ export default {
     margin-right: 20px;
   }
 
-  /* @media screen and (max-width:991px){
-    .our-partners{
-      margin:100px 70px auto 70px;
+  @media screen and (max-width:1350px){
+    .partner-slider img{
+      max-width:240px;
+      max-height:130px;
     }
-  } */
+  }
+  @media screen and (max-width:1200px){
+    .partner-slider img{
+      max-width:200px;
+      max-height:100px;
+    }
+  }
+   @media screen and (max-width:1025px){
+    .our-partners-header h2{
+      font-size: 40px;
+    }
+    .our-partners-header span{
+      font-size:18px;
+    }
+    .slider-additional .counter span{
+      font-size: 20px;
+    }
+  }
+  @media screen and (max-width:950px){
+    .partner-slider img{
+      max-width:170px;
+      max-height:70px;
+    }
+    .slider-additional .arrows img{
+      width:50px;
+    }
+    .our-partners-header h2{
+      font-size:32px;
+    }
+    .our-partners-header span{
+      font-size: 16px;
+    }
+    .slider-additional .counter span{
+      font-size: 18px;
+    }
+    .partner-slider{
+      margin-top:30px;
+    }
+    .slider-additional{
+      margin-top:30px;
+    }
+  }
+  @media screen and (max-width:650px){
+    .our-partners-header h2{
+      font-size:28px;
+    }
+    .our-partners-header span{
+      font-size: 14px;
+    }
+    .slider-additional .counter span{
+      font-size: 16px;
+    }
+  }
+  @media screen and (max-width:600px){
+    .partner-slider img{
+      max-width:160px;
+      max-height:60px;
+    }
+    .slider-additional .arrows img{
+      width:40px;
+    }
+  }
+  @media screen and (max-width:550px){
+    .partner-slider{
+      margin-top:15px;
+    }
+    .partner-slider img{
+      max-width:150px;
+      max-height:50px;
+    }
+    .slider-additional{
+      margin-top: 15px;
+    }
+    .slider-additional .arrows img{
+      width:35px;
+    }
+    .slider-additional .arrows img:first-child{
+      margin-right: 10px;
+    }
+    .our-partners-header h2{
+      font-size: 24px;
+    }
+    .our-partners-header span{
+      font-size: 12px;
+      height: 16px;
+    }
+    .slider-additional .counter span{
+      font-size: 14px;
+    }
+  }
+  @media screen and (max-width:450px){
+    .our-partners-header h2{
+      font-size:22px;
+    }
+    .our-partners-header span{
+      font-size: 10px;
+    }
+    .slider-additional .counter span{
+      font-size: 12px;
+    }
+    .partner-slider img{
+      max-width:140px;
+      max-height:40px;
+    }
+  }
+  @media screen and (max-width:400px){
+    .our-partners-header h2{
+      font-size:20px;
+    }
+    .our-partners-header span{
+      font-size: 8px;
+    }
+    .slider-additional .counter span{
+      font-size: 10px;
+    }
+    .partner-slider{
+      margin-top:0;
+    }
+    .slider-additional{
+      margin-top:10px;
+    }
+    .slider-additional .arrows img{
+      width:25px;
+    }
+  }
   
 
   /* Блок "Рекомендации" */
@@ -714,8 +1060,8 @@ export default {
   }
 
   .recommended-positions{
-    width: 626px;
-    height: 757px;
+    max-width: 626px;
+    /* max-height: 757px; */
     background: #EEEEEE;
     margin-right: 20px;
     
@@ -728,8 +1074,7 @@ export default {
     font-weight: 700;
     font-size: 24px;
     color: #1E1E1E;
-    margin-top: 40px;
-    margin-left: 40px;
+    margin: 40px 15px auto 40px;
   }
   .recommended-positions .new{
     width: 140px;
@@ -749,13 +1094,18 @@ export default {
   }
   .vacancy-card{
     margin-bottom: 28px;
+
   }
   .vacancies{
     margin: 36px 70px auto 70px;
+    display:flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
   }
   .card{
     max-width: 400px;
-    height: 142px;
+    /* height: 142px; */
     background: #FFFFFF;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
     display: flex;
@@ -792,8 +1142,8 @@ export default {
   }
   .card-vacancy-info h3{
     margin:0;
-    width: 219px;
-    height: 50px;
+    /* width: 219px;
+    height: 50px; */
     font-weight: 700;
     font-size: 20px;
     color: #1E1E1E;
@@ -818,6 +1168,7 @@ export default {
     font-size: 14px;
     color: #9AA199;
     margin-left:auto;
+    margin-right: 10px;
   }
   .vacancies-button{
     margin-top:57px;
@@ -881,26 +1232,184 @@ export default {
   }
 
   
-  /* @media screen and (max-width:991px){
+  @media screen and (max-width:1350px){
     .recommendations{
       flex-direction: column;
-      justify-content: center;
       align-items: center;
     }
     .recommended-positions{
+      margin-bottom: 30px;
       margin-right: 0;
-      margin-bottom: 20px;
     }
-    .areas{
-      width:800px;
+  }
+  @media screen and (max-width:800px){
+    .recommended-positions-header h3, .areas-directions h3{
+      font-size: 22px;
     }
-    .areas-directions{
-      margin: 40px 40px auto 40px;
+    .recommended-positions .new{
+      width:120px;
+    }
+    .recommended-positions .new p{
+      font-size: 20px;
+    }
+    .card-vacancy-info h3{
+      font-size: 18px;
+      margin-bottom: 0px;
+    }
+    .card-vacancy-info p{
+      font-size: 14px;
+    }
+    .card-info-basic img{
+      width:60px;
+      height: 60px;
+    }
+    .vacancy-direction{
+      font-size: 14px;
+    }
+    .vacancy-time{
+      font-size: 12px;
+    }
+    .marker-red{
+      height: 120px;
+    }
+    .marker-blue{
+      height: 120px;
+    }
+    .vacancies-button{
+      margin-top:40px;
+    }
+    .vacancies-button button{
+      font-size: 22px;
+      max-width: 400px;
+      max-height: 74px;
+    }
+    .areas-directions h3{
+      margin-bottom:20px;
     }
     .directions{
-      margin-left:10px;
+      margin-bottom:20px;
     }
-  } */
+    .directions div{
+      padding: 15px;
+      margin-right: 15px;
+      margin-bottom: 15px;
+    }
+    .directions div p{
+      font-size: 18px;
+    }
+  }
+  @media screen and (max-width:700px){
+    .vacancies{
+      margin-left:40px;
+      margin-right: auto;
+    }
+    .vacancies-button{
+      margin-top:20px;
+    }
+    .recommended-positions-header h3{
+      margin-right: 20px;
+    }
+  }
+  @media screen and (max-width:600px){
+    .recommendations{
+      margin-top:60px;
+    }
+    .recommended-positions-header h3, .areas-directions h3{
+      margin-right: 10px;
+      font-size:20px;
+      margin-left:20px;
+      margin-top:20px;
+    }
+    .recommended-positions-header h3{
+      margin-right: 30px;
+    }
+    .recommended-positions-header .new{
+      padding:3px;
+      margin-top:10px;
+    }
+    .recommended-positions-header .new p{
+      font-size:18px;
+    }
+    .vacancies{
+      margin-left:20px;
+      margin-top:20px;
+      margin-right: 20px;
+    }
+    .marker-red, .marker-blue{
+      width:15px;
+    }
+    .card-info-basic img{
+      width:40px;
+      height: 40px;
+    }
+    .card-vacancy-info{
+      margin-left: 10px;
+    }
+    .card-vacancy-info h3{
+      font-size:16px;
+      margin-bottom:10px;
+      margin-right: 20px;
+    }
+    .card-vacancy-info p{
+      font-size:12px;
+    }
+    .vacancy-direction{
+      font-size: 12px;
+    }
+    .vacancy-time{
+      font-size: 10px;
+    }
+    .vacancies-button{
+      justify-self: center;
+      align-self: center;
+    }
+    .vacancies-button button, .directions-button button{
+      width:auto;
+      height:auto;
+      padding:15px;
+      font-size: 18px;
+    }
+    .directions{
+      margin-top:20px;
+    }
+    .areas-directions h3{
+      margin-bottom:0;
+    }
+    .areas-directions{
+      margin:auto 20px auto 20px;
+    }
+    .directions div p{
+      font-size: 16px;
+    }
+  }
+  @media screen and (max-width:400px){
+    .recommended-positions-header .new{
+      width:100px;
+    }
+    .recommended-positions-header .new p{
+      font-size:15px;
+    }
+    .card-info-basic img{
+      width:25px;
+      height:25px;
+    }
+    .card-vacancy-info h3{
+      font-size:14px;
+      margin-bottom:5px;
+    }
+    .card-vacancy-info p{
+      font-size:10px;
+    }
+    .vacancy-direction{
+      font-size:10px;
+    }
+    .vacancy-time{
+      font-size:8px;
+    }
+    .marker-blue, .marker-red{
+      height:110px;
+    }
+  }
 
   /* Ближайшие мероприятия */
   .upcoming-events{
@@ -917,16 +1426,17 @@ export default {
   .event-list{
     display:flex;
     margin-top:33px;
-    justify-content: space-between;
+    justify-content: center;
   }
   .event-card{
     display:flex;
     flex-wrap: wrap;
     align-content: space-between;
-    width:336px;
+    max-width:336px;
     /* max-width:396px; */
-    height:487px;
-    /* margin-right:4px; */
+    min-height:450px;
+    max-height:487px;
+    margin-right:4px;
   }
   .event-card:nth-child(1){
     background: url('~/assets/images/event1.png');
@@ -939,6 +1449,7 @@ export default {
   }
   .event-card:nth-child(4){
     background: url('~/assets/images/event4.png');
+    margin-right:0;
   }
   .top-gradient{
     align-self: flex-start;
@@ -948,6 +1459,8 @@ export default {
   }
   .bottom-gradient{
     align-self: flex-end;
+    display: flex;
+    align-items: center;
     width: 100%;
     height: 130px;
     background: linear-gradient(0deg, #1E1E1E 0%, rgba(30, 30, 30, 0) 100%);
@@ -1005,6 +1518,166 @@ export default {
   }
   .list-additional .arrows img:first-child{
     margin-right: 20px;
+  }
+  @media screen and (max-width:1025px){
+    .events-header h2{
+      font-size:40px;
+    }
+    .list-additional .all-btn span{
+      font-size: 18px;
+    }
+    .list-additional .counter span{
+      font-size: 20px;
+    }
+  }
+  @media screen and (max-width:950px){
+    .events-header h2{
+      font-size:32px;
+    }
+    .list-additional .arrows img{
+      width:50px;
+    }
+    .list-additional .all-btn span{
+      font-size: 16px;
+    }
+    .list-additional .counter span{
+      font-size: 18px;
+    }
+  }
+  @media screen and (max-width:650px){
+    .events-header h2{
+      font-size:28px;
+    }
+    .list-additional .all-btn span{
+      font-size: 14px;
+    }
+    .list-additional .counter span{
+      font-size: 16px;
+    }
+  }
+  @media screen and (max-width:600px){
+    .list-additional .arrows img{
+      width:40px;
+    }
+  }
+   @media screen and (max-width:550px){
+    .upcoming-events{
+      margin-top:60px;
+    }
+    .events-header h2{
+      font-size:24px;
+    }
+    .list-additional{
+      margin-top:15px;
+    }
+    .list-additional .arrows img{
+      width:35px;
+    }
+    .list-additional .arrows img:first-child{
+      margin-right: 10px;
+    }
+    .list-additional .all-btn span{
+      font-size: 12px;
+    }
+    .list-additional .counter span{
+      font-size: 14px;
+    }
+    .list-additional .counter{
+      margin-right: 10px;
+    }
+  }
+   @media screen and (max-width:450px){
+    .events-header h2{
+      font-size:22px;
+    }
+    .list-additional .all-btn span{
+      font-size: 10px;
+    }
+    .list-additional .counter span{
+      font-size: 12px;
+    }
+  }
+   @media screen and (max-width:400px){
+    .events-header h2{
+      font-size:20px;
+    }
+    .list-additional{
+      margin-top:10px;
+    }
+    .list-additional .all-btn span{
+      font-size:8px;
+    }
+    .list-additional .counter span{
+      font-size: 10px;
+    }
+    .list-additional .arrows img{
+      width:25px;
+    }
+  }
+
+  @media screen and (max-width:1200px){
+    .event-card{
+      max-height:450px;
+      min-height: 400px;
+    }
+    .top-gradient p{
+      margin-left:30px;
+      margin-top:30px;
+      line-height: normal;
+      font-size: 20px;
+    }
+    .bottom-gradient p{
+      margin:20px;
+      margin-top:0;
+      font-size:14px;
+      max-width:240px;
+    }
+  }
+  @media screen and (max-width:1070px){
+    .event-card{
+      max-height:400px;
+      min-height: 350px;
+    }
+    .top-gradient p{
+      margin-left:20px;
+      margin-top:20px;
+      font-size: 18px;
+    }
+    .bottom-gradient p{
+      margin:15px;
+      margin-top:0;
+      font-size:14px;
+    }
+  }
+  @media screen and (max-width:900px){
+    .event-card{
+      max-height:350px;
+      min-height: 300px;
+    }
+    .event-card:nth-child(4){
+      display:none;
+    }
+    .top-gradient p{
+      margin-left:20px;
+      margin-top:20px;
+      line-height: normal;
+      font-size: 16px;
+    }
+    .bottom-gradient p{
+      margin:10px;
+      margin-top:0;
+      font-size:12px;
+    }
+  }
+  @media screen and (max-width:700px){
+    .event-card:nth-child(3){
+      display:none;
+    }
+  }
+  @media screen and (max-width:470px){
+    .event-card:nth-child(2){
+      display:none;
+    }
   }
   
   /* Блок "Курсы и вебинары" */
@@ -1094,9 +1767,119 @@ export default {
     font-size: 14px;
     color: #9AA199;
   }
+  @media screen and (max-width:1025px){
+    .courses-and-webinars-header h2{
+      font-size:40px;
+    }
+  }
+  @media screen and (max-width:950px){
+    .courses-and-webinars-header h2{
+      font-size:32px;
+    }
+  }
+  @media screen and (max-width:650px){
+    .courses-and-webinars-header h2{
+      font-size:28px;
+    }
+  }
+   @media screen and (max-width:550px){
+    .courses-and-webinars{
+      margin-top:60px;
+    }
+    .courses-and-webinars-header h2{
+      font-size:24px;
+    }
+  }
+   @media screen and (max-width:450px){
+    .courses-and-webinars-header h2{
+      font-size:22px;
+    }
+  }
+   @media screen and (max-width:400px){
+    .courses-and-webinars-header h2{
+      font-size:20px;
+    }
+  }
+
+  @media screen and (max-width:1400px){
+    .course-card{
+      width:250px;
+      height:340px;
+    }
+    .course-price-block .course-price{
+      font-size:20px;
+      margin-top:5px;
+    }
+    .course-main-info{
+      margin:20px;
+    }
+    .course-main-info h3{
+      font-size:16px;
+    }
+    .course-main-info .course-author{
+      font-size:12px;
+    }
+    .course-rating p{
+      font-size:12px;
+    }
+    .course-rating img{
+      width:20px;
+    }
+  }
+  @media screen and (max-width:1230px){
+    .course-card:nth-child(4){
+      display:none;
+    }
+    .course-card{
+      width: 290px;
+    }
+  }
+  @media screen and (max-width:1100px){
+    .course-card{
+      width: 250px;
+    }
+  }
+  @media screen and (max-width:1025px){
+    .courses-list{
+      margin-top:50px;
+    }
+  }
+  @media screen and (max-width:970px){
+    .course-card:nth-child(3){
+      display:none;
+    }
+    .course-card{
+      width: 290px;
+    }
+    .courses-list{
+      justify-content: center;
+    }
+    .course-card:nth-child(1){
+      margin-right: 30px;
+    }
+  }
+  @media screen and (max-width:750px){
+    .course-card{
+      width: 250px;
+    }
+  }
+  @media screen and (max-width:670px){
+    .course-card:nth-child(2){
+      display:none;
+    }
+    .course-card:nth-child(1){
+      margin-right: 0;
+    }
+    .courses-list{
+      justify-content: center;
+    }
+    .course-card{
+      width: 290px;
+    }
+  }
 
   /* Футер */
-  .footer{
+  /* .footer{
     background: #1E1E1E;
     height: 442px;
   }
@@ -1141,7 +1924,7 @@ export default {
   }
   .social-networks img:last-child{
     margin-right: 0;
-  }
+  } */
   
 
 </style>
