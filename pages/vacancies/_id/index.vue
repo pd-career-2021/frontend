@@ -1,6 +1,6 @@
 <template>
 <div class="app">
-    <AppAside />
+    <TheRightMenu />
     <main>
         <section class="vacancy section">
             <div class="section__header">

@@ -486,7 +486,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
   @font-face {
     font-family: 'Gilroy';
     font-style: normal;
