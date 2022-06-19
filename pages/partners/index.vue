@@ -1,7 +1,10 @@
 <template>
-<div class="app">
-  <h1>ваш код может быть здесь. Страница "Партнеры и работодатели"</h1>
-</div>
+  <div class="app">
+    <TheRightMenu />
+    <PartnersTop />
+    <PartnersMain />
+    <AppFooter />
+  </div>
 </template>
 
 <script>
@@ -9,3 +12,9 @@ export default {
   name: 'IndexPage',
 }
 </script>
+
+<style scoped>
+.app {
+  background: #f7f7f7;
+}
+</style>

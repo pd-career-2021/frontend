@@ -1,0 +1,35 @@
+@use '../utilities/mixins';
+@use '../utilities/variables';
+
+.company {
+    &__label {
+        font-weight: 700;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    &__logo {
+        height: 230px;
+        width: 230px;
+        @include mixins.flex-box($j: center, $a: center);
+        margin-bottom: 20px;
+        
+        background: variables.color('white-bg');
+    }
+
+    &__name {
+        font-weight: 700;
+        font-size: 20px;
+        color: variables.color('dark-blue');
+        @include mixins.flex-box($a: center, $g: 5px);
+    }
+
+    &__address {
+        margin-top: 45px;
+        @include mixins.flex-box($a: center, $g: 8px);
+
+        @media (max-width: 768px) {
+            margin-top: 20px;
+        }
+    }
+}

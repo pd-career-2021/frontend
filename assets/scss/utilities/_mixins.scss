@@ -1,0 +1,8 @@
+@mixin flex-box($g: null, $d: null, $a: null, $j: null) {
+    display: flex;
+
+    @if ($g != null) { gap: $g; };
+    @if ($d != null) { flex-direction: $d; };
+    @if ($a != null) { align-items: $a; };
+    @if ($j != null) { justify-content: $j; };
+}

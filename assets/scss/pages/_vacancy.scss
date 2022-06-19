@@ -1,0 +1,230 @@
+@use '../utilities/variables';
+@use '../utilities/mixins';
+
+@forward '../layout/forms';
+@forward '../layout/aside';
+
+@forward '../components/company';
+@forward '../components/button';
+
+.vacancy {
+    &__wrapper {
+        @include mixins.flex-box($j: space-between, $a: center);
+        
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
+    }
+
+    &__excerpt {
+        @media (max-width: 768px) {
+            text-align: center;
+        }
+    }
+
+    &__subtitle {
+        &--light {
+            color: #fff;
+
+            @media (max-width: 768px) {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            font-size: 24px;
+            text-align: center;
+        }
+    }
+
+    &__name {
+        margin-bottom: 20px;
+
+        @media (max-width: 576px) {
+            font-size: 28px;
+        }
+    }
+
+    &__pay {
+        margin-bottom: 20px;
+        font-weight: 700;
+        font-size: 32px;
+
+        @media (max-width: 576px) {
+            font-size: 22px;
+        }
+    }
+
+    &__conditions {
+        font-size: 24px;
+        margin-bottom: 35px;
+
+        @media (max-width: 576px) {
+            font-size: 16px;
+        }
+    }
+
+    &__actions {
+        @include mixins.flex-box($g: 25px);
+        
+        @media (max-width: 768px) {
+            gap: 10px;
+            justify-content: center;    
+        }
+
+        .button--icon {
+            @media (max-width: 576px) {
+                min-height: 48px;
+                min-width: 48px;
+            }
+        }
+    }
+
+    &__action {
+        @media (max-width: 576px) {
+            padding: 12px 18px;
+            font-size: 18px;
+        }
+    }
+
+    &__company {
+        @include mixins.flex-box($d: column, $a: flex-end);
+
+        @media (max-width: 768px) {
+            margin-top: 30px;
+            align-items: center;
+        }
+    }
+
+    &__content {
+        background-color: variables.color('light-bg');
+        padding: 45px 0;
+    }
+
+    &__chapter {
+        margin-bottom: 45px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 576px) {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+    }
+
+    &__caption {
+        font-weight: 600;
+        
+        @media (max-width: 576px) {
+            font-size: 22px;
+        }
+    }
+
+    &__description {
+        margin-top: 15px;
+        margin-left: 45px;
+        font-size: 24px;
+        line-height: 29px;
+        color: variables.color('dark');
+
+        @media (max-width: 576px) {
+            margin-left: 0;
+        }
+    }
+
+    &__text {
+        margin-left: 30px;
+        @include mixins.flex-box($g: 8px, $a: center);
+
+        @media (max-width: 576px) {
+            font-size: 20px;
+        }
+    }
+
+    &__skills {
+        margin: 25px 0 25px 45px;
+        @include mixins.flex-box($g: 60px);
+        flex-wrap: wrap;
+
+        @media (max-width: 576px) {
+            flex-direction: column;
+            align-items: center;
+            margin-left: 0;
+            margin-right: 0;
+            gap: 20px;
+        }
+    }
+
+    &__skill {
+        padding: 30px 50px;
+        font-size: 24px;
+        background-color: variables.color('white-bg');
+
+        @media (max-width: 576px) {
+            font-size: 20px;
+            padding: 15px 25px;
+        }
+    }
+
+    &__connection {
+        @include mixins.flex-box();
+
+        @media (max-width: 992px) {
+            display: block;
+        }
+    }
+
+    &__map {
+        width: 50%;
+        min-height: 100%;
+        object-fit: fill;
+
+        @media (max-width: 992px) {
+            width: 100%;
+        }
+    }
+
+    &__contacts {
+        width: 50%;
+        background-color: variables.color('blue');
+        padding: 60px 30px 60px 90px;
+
+        @media (max-width: 992px) {
+            width: 100%;
+            @include mixins.flex-box($a: center, $d: column);
+            padding: 30px;
+            text-align: center;
+        }
+    }
+
+    &__form {
+        margin-top: 20px;
+        @include mixins.flex-box($d: column, $g: 10px);
+        width: max-content;
+    }
+
+    &__socials {
+        margin-top: 45px;
+        @include mixins.flex-box($g: 5px);
+
+        @media (max-width: 768px) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+    
+    &__social {
+        background-color: variables.color('white-bg');
+        
+        @include mixins.flex-box($a: center, $j: center);
+        width: 50px;
+        height: 50px;
+    }
+
+    &__helper {
+        margin-top: 15px;
+        color: #fff;
+    }
+}
