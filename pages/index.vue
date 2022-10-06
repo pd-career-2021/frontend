@@ -1,6 +1,5 @@
 <template>
 <div class="app">
-<TheRightMenu/>
   <div class="main">
     <div class="welcome-banner">
 
@@ -414,7 +413,6 @@
     </div>
     </div>
 
-    <AppFooter/>
 
     <!-- <div class="footer">
       <div class="footer-main">

@@ -15,12 +15,7 @@
 </template>
 
 <script>
-import ButtonFavoriteClear from '~/components/Buttons/ButtonFavoriteClear'
-
 export default {
-    components: {
-        ButtonFavoriteClear
-    },
     props: {
         vacancy: {
             id: Number,

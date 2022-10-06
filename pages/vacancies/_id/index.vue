@@ -1,13 +1,12 @@
 <template>
 <div class="app">
-    <TheRightMenu />
     <main>
         <section class="vacancy section">
-            <div class="section__header">
+            <div class="section__header section__header--center">
                 <div class="container">
-                   <div class="vacancy__wrapper">
+                   <div class="section__row">
                         <VacancyExcerpt :vacancy="vacancy"/>
-                        <VacancyCompany :company="company"/>
+                        <VacancyCompany className="vacancy__company" :company="company"/>
                    </div>
                 </div>
             </div>
@@ -26,31 +25,23 @@
             </div>
         </section>
     </main>
-    <AppFooter />
 </div>
 </template>
 
 <script>
-import AppAside from '~/components/AppAside';
-import AppFooter from '~/components/AppFooter';
 
-import VacancyExcerpt from '~/components/Vacancy/VacancyExcerpt';
-import VacancyCompany from '~/components/Vacancy/VacancyCompany';
-import VacancyDescription from '~/components/Vacancy/VacancyDescription';
-import VacancySkills from '~/components/Vacancy/VacancySkills';
-import VacancyMap from '~/components/Vacancy/VacancyMap';
-import VacancyForm from '~/components/Vacancy/VacancyForm';
 
 
 export default {
     name: 'VacancyPage',
-    components: {
-        AppAside, AppFooter, VacancyExcerpt, VacancyCompany, VacancyDescription, VacancySkills, VacancyMap, VacancyForm
-    },
+
     data() {
         return {
             company: {
-                logo: 'https://i.imgur.com/hWq8JCW.png',
+                logo: {
+                    image: 'https://i.imgur.com/hWq8JCW.png',
+                    alt: 'Google logo'
+                },
                 name: 'Google',
                 link: 'https://google.com',
                 address: 'Москва ул. Пушкина дом 14 строение 2'

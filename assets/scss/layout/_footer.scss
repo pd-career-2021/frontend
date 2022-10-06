@@ -13,6 +13,11 @@
 
     a {
         color: inherit;
+        transition: .3s ease;
+
+        &:hover {
+            color: variables.color('blue');
+        }
     }
 
     &__wrapper {

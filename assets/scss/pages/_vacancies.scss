@@ -1,18 +1,14 @@
 @use '../utilities/mixins';
 @use '../utilities/variables';
 
-@forward '../components/vacancy-item';
-@forward '../components/vacancies-options';
-
 .vacancies {
-
     .section__header {
         background-image: url('~/assets/images/section-vacancies.jpg');
     }
 
     &__wrapper {
         @include mixins.flex-box($j: space-between, $g: 70px);
-        
+
         @media (max-width: 992px) {
             display: block;
         }
@@ -38,7 +34,7 @@
         background: variables.color('white-bg');
         font-size: 20px;
         @include mixins.flex-box($a: center, $g: 8px);
-        
+
 
         &--button {
             background: variables.color('red');

@@ -5,12 +5,7 @@
 </template>
 
 <script>
-import VacanciesItem from '~/components/vacancies/VacanciesItem';
-
 export default {
-    components: {
-        VacanciesItem
-    },
     props: {
         vacancies: Array
     },

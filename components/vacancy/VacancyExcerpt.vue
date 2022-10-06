@@ -15,12 +15,7 @@
 </template>
 
 <script>
-import ButtonFavorite from '~/components/Buttons/ButtonFavorite';
-
 export default {
-    components: {
-        ButtonFavorite
-    },
     props: {
         vacancy: {
             name: String,

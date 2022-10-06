@@ -50,19 +50,19 @@
         <h3 class="title__my">Скачать документы</h3>
         <div class="block__docs">
           <div class="block__img">
-            <img class="doc-img" src="~@/assets/images/screpka.png" alt="" />
+            <img class="doc-img" src="~assets/images/screpka.png" alt="" />
             <a href="#"
               >Скачать документы номер в№13131313 от 2013 года 19 марта</a
             >
           </div>
           <div class="block__img">
-            <img class="doc-img" src="~@/assets/images/screpka.png" alt="" />
+            <img class="doc-img" src="~assets/images/screpka.png" alt="" />
             <a href="#"
               >Скачать документы список 13131313 13131313 1313131313131313
             </a>
           </div>
           <div class="block__img">
-            <img class="doc-img" src="~@/assets/images/screpka.png" alt="" />
+            <img class="doc-img" src="~assets/images/screpka.png" alt="" />
             <a href="#"
               >Скачать документы ещё какой то документ незнаяю названия</a
             >
@@ -109,7 +109,7 @@ h2 {
   width: 48%;
   margin-right: 20px;
   height: 417px;
-  background: url('~@/assets/images/back.png') no-repeat right 30% top 0%;
+  background: url('~assets/images/back.png') no-repeat right 30% top 0%;
   background-size: cover;
 }
 .info {

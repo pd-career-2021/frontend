@@ -1,0 +1,115 @@
+@use '../utilities/mixins';
+@use '../utilities/variables';
+
+.recommendation {
+    border-left: 24px solid transparent;
+
+    &:nth-child(3n) {
+        border-left-color: #E63246;
+
+        .recommendation__item-link::after {
+            background-color: #E63246;
+        }
+    }
+
+    &:nth-child(3n + 1) {
+        border-left-color: #55B432;
+
+        .recommendation__item-link {
+            &::after, &::before {
+                background-color: #55B432;   
+            }
+        }
+    }
+
+    &:nth-child(3n + 2) {
+        border-left-color: #874BA0;
+
+        .recommendation__item-link::after {
+            background-color: #874BA0;
+        }
+    }
+
+    &__content {
+        position: relative;
+        z-index: 2;
+    }
+
+    &__item-link {
+        display: block;
+        padding: 15px;
+        width: 400px;
+        background-color: #fff;
+        color: variables.color('dark');
+        transition: color .7s ease-in-out;
+        overflow: hidden;
+        position: relative;
+
+        &::after {
+            content: "";
+            height: 1000px;
+            width: 1000px;
+            display: block;
+            position: absolute;
+            z-index: 1;
+            bottom: -500px;
+            left: -500px;
+            transform: scale(0);
+            will-change: transform;
+            transition: transform 1.5s ease;
+            border-radius: 50%;
+        }
+
+        &:hover {
+            color: #fff;
+
+            &::after {
+                transform: scale(1);
+            }
+
+            .recommendation {
+                &__date, &__company {
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    &__header {
+        @include mixins.flex-box($g: 20px);
+        margin-bottom: 15px;
+    }
+
+    &__preview {
+        height: 70px;
+        width: 70px;
+        min-width: 70px;
+    }
+
+    &__image {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__name {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    &__company {
+        color: variables.color('dark-blue');
+        transition: color .7s ease-in-out;
+    }
+
+    &__footer {
+        @include mixins.flex-box($j: space-between, $a: flex-end);
+    }
+
+    &__date {
+        color: variables.color('gray');
+        transition: color .7s ease-in-out;
+        font-size: 14px;
+    }
+}

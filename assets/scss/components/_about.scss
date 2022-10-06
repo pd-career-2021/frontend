@@ -1,0 +1,61 @@
+@use '../utilities/mixins';
+@use '../utilities/variables';
+
+.about {
+    @include mixins.flex-box($j: space-between);
+    height: 550px;
+
+    &__preview {
+        width: calc(60% - 10px);
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__column {
+        width: calc(40% - 10px);
+        @include mixins.flex-box($d: column, $j: space-between, $g: 25px);
+    }
+
+    &__block:nth-child(1) {
+        padding: 30px 20px;
+        background-color: #fff;
+        height: 100%;
+    }
+
+    &__block:nth-child(2) {
+        padding: 20px 40px;
+        background-color: variables.color('dark-blue');
+        color: #fff;
+        @include mixins.flex-box($d: column);
+    }
+
+    &__title {
+        margin-bottom: 10px;
+        font-weight: 700;
+        font-size: 36px;
+    }
+
+    &__description {
+        font-size: 20px;
+    }
+
+    &__email {
+        margin-bottom: 15px;
+    }
+
+    &__email, &__tel {
+        font-weight: 600;
+        font-size: 24px;
+        color: inherit;
+        align-self: flex-end;
+        transition: opacity .3s ease;
+
+        &:hover {
+            opacity: .7;
+        }
+    }
+}

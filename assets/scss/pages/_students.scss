@@ -1,0 +1,41 @@
+@use '../utilities/variables';
+@use '../utilities/mixins';
+
+.students {
+    .section__header {
+        background-image: url('~/assets/images/section-students.jpg');
+    }
+
+    &__practice {
+        margin-top: 120px;
+        margin-bottom: -150px;
+    }
+}
+
+.recommendations {
+    padding: 105px 90px 60px;
+    background-color: variables.color('light-bg');
+    position: relative;
+
+    &__list {
+        @include mixins.flex-box($j: space-between);
+        flex-wrap: wrap;
+        row-gap: 40px;
+        margin-bottom: 60px;
+    }
+
+    &__count {
+        position: absolute;
+        top: 20px;
+        right: 60px;
+        padding: 5px 20px;
+        background-color: #E63246;
+        font-weight: 700;
+        font-size: 24px;
+        color: #fff;
+    }
+
+    &__footer {
+        @include mixins.flex-box($j: center);
+    }
+}

@@ -2,10 +2,8 @@
 @use '../utilities/mixins';
 
 .button {
-    display: block;
-    border: none;
-    padding: 18px 36px;
-    text-align: center;
+    padding: 20px 60px;
+    display: inline-block;
 
     cursor: pointer;
 
@@ -13,10 +11,29 @@
     font-size: 24px;
 
     color: variables.color('white');
-    background-color: variables.color('dark');
+    background-color: variables.color('blue');
+    transition: background-color .4s ease, color .4s ease;
+    
+    &:hover {
+        background-color: variables.color('dark');
+    }
 
-    &--blue {
-        background-color: variables.color('blue');
+    &--white {
+        background-color: #fff;
+        color: variables.color('dark');
+        border: 3px solid variables.color('light-bg');
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+
+        &:hover {
+            background-color: transparent;
+            color: variables.color('light-bg');
+        }
+    }
+
+    &--small {
+        padding: 10px 25px;
+        font-size: 20px;
+        font-weight: 700;
     }
    
     &--icon {
@@ -28,5 +45,31 @@
 
     &--clear {
         padding: 0;
+    }
+}
+
+.link {
+    overflow: hidden;
+    position: relative;
+    padding-bottom: .5rem;
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        height: 2px;
+        width: 100%;
+        background-color: variables.color('dark');
+        transition: width .3s ease;
+        left: 0;
+    }
+
+    &:hover {
+        &::after {
+            width: 0;
+            left: auto;
+            right: 0;
+        }
     }
 }

@@ -1,14 +1,8 @@
 <template>
 <div class="app">
-   <TheRightMenu />
     <main>
         <section class="section vacancies">
-            <div class="section__header section__header--fixed">
-                <div class="container">
-                    <h2 class="section__title">Вакансии</h2>
-                    <p class="section__subtitle">Какой-то текст</p>
-                </div>
-            </div>
+            <SectionHeader>Вакансии</SectionHeader>
             <div class="section__content">
                 <div class="container">
                     <div class="vacancies__wrapper">
@@ -22,24 +16,12 @@
             </div>
         </section>
     </main>
-    <AppFooter />
 </div>
 </template>
 
 <script>
-import Aside from '~/components/AppAside';
-import Footer from '~/components/AppFooter';
-
-import VacanciesOptions from '~/components/Vacancies/VacanciesOptions';
-import VacanciesFilters from '~/components/Vacancies/VacanciesFilters';
-import VacanciesList from '~/components/Vacancies/VacanciesList';
-
-
 export default {
     name: 'VacancyPage',
-    components: {
-        Aside, Footer, VacanciesOptions, VacanciesFilters, VacanciesList
-    },
     data() {
         return {
             filters: [
@@ -48,7 +30,7 @@ export default {
                 { id: 2, body: 'Не имеет значения' }
             ],
             vacancies: [
-                { 
+                {
                     id: 0,
                     name: 'Название должности',
                     logo: {
@@ -65,7 +47,7 @@ export default {
                     pay: '99 000',
                     isFavorite: false
                 },
-                { 
+                {
                     id: 1,
                     name: 'Название должности',
                     logo: {
@@ -82,7 +64,7 @@ export default {
                     pay: '99 000',
                     isFavorite: true
                 },
-                { 
+                {
                     id: 2,
                     name: 'Название должности',
                     logo: {
@@ -99,7 +81,7 @@ export default {
                     pay: '99 000',
                     isFavorite: false
                 },
-                { 
+                {
                     id: 3,
                     name: 'Название должности',
                     logo: {

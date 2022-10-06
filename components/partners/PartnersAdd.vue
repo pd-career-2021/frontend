@@ -33,22 +33,22 @@
         <h4 class="title_socials">Вы можете указать свои социальные сети</h4>
         <div class="block__socials">
              <div class="socials__item">
-                <img class="soc-img" src="~@/assets/images/VK-add.png" alt="">
+                <img class="soc-img" src="~assets/images/VK-add.png" alt="">
              </div>
              <div class="socials__item">
-                <img class="soc-img" src="~@/assets/images/email.png" alt="">
+                <img class="soc-img" src="~assets/images/email.png" alt="">
              </div>
              <div class="socials__item">
-                <img class="soc-img" src="~@/assets/images/google.png" alt="">
+                <img class="soc-img" src="~assets/images/google.png" alt="">
              </div>
              <div class="socials__item">
-                <img class="soc-img" src="~@/assets/images/VK-add.png" alt="">
+                <img class="soc-img" src="~assets/images/VK-add.png" alt="">
              </div>
              <div class="socials__item">
-                <img class="soc-img" src="~@/assets/images/email.png" alt="">
+                <img class="soc-img" src="~assets/images/email.png" alt="">
              </div>
              <div class="socials__item">
-                <img class="soc-img" src="~@/assets/images/google.png" alt="">
+                <img class="soc-img" src="~assets/images/google.png" alt="">
              </div>
         </div>
     </div>
@@ -60,10 +60,10 @@
 <style scoped>
 
 .soc-img{
-    display: block; 
+    display: block;
     margin-top: 15px;
-    margin-left: auto; 
-    margin-right: auto; 
+    margin-left: auto;
+    margin-right: auto;
     width: 50px;
     height: 50px;
 }
@@ -87,12 +87,12 @@
     color: #9AA199;
 }
 .block__flex-item2{
-    display: flex;  
+    display: flex;
 }
 .block__flex-item1{
     display: flex;
     margin-top: 40px;
-    
+
 }
 .flex__item3{
     padding-left: 30px;
@@ -106,7 +106,7 @@
     height: 60px;
     margin-bottom: 40px;
     width: 63%;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     margin-left: 72px;
 }
 .flex__item2{
@@ -121,7 +121,7 @@
     height: 60px;
     margin-bottom: 40px;
     width: 21%;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     margin-left: 72px;
 }
 .flex__item1{
@@ -188,7 +188,7 @@
     background: #F7F7F7;
     width: 100%;
     height: 370px;
-   
+
 
 }
 h2{
@@ -207,7 +207,7 @@ h2{
   position: relative;
   height: 100%;
   width: 100%;
-  background: url('~@/assets/images/polikek.png') no-repeat right 30% top 0%;
+  background: url('~assets/images/polikek.png') no-repeat right 30% top 0%;
   background-size: cover;
 }
 .block__text{
@@ -262,9 +262,9 @@ h1{
         margin-left: 0;
         font-size: 15px;
         padding-left: 10px;
-        
+
     }
- 
+
     .block__socials, h2{
         margin-left: 55px;
     }
@@ -277,14 +277,14 @@ h1{
         margin-left: 0;
         font-size: 15px;
         padding-left: 10px;
-        
+
     }
     .flex__item2{
         width: 91%;
         padding-left: 10px;
         margin-left: 0;
         font-size: 15px;
-        
+
     }
 
     .block__form{
@@ -331,14 +331,14 @@ h1{
      .block__down{
         height: 950px;
     }
-   
+
     .title_socials,.block__socials{
         margin-left: 30px;
         padding-right: 20px;
     }
    h1{
        font-size: 42px;
-       
+
    }
    .block__desc{
        font-size: 20px;
