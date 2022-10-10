@@ -14,10 +14,6 @@
 
 <script>
 export default {
-name: "PartnersBlock"
+    name: "PartnersBlock"
 }
 </script>
-
-<style scoped>
-
-</style>

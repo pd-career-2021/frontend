@@ -1,15 +1,13 @@
 <template>
-    <div class="app">
-        <main>
-            <section class="students section">
-                <SectionHeader>Студентам</SectionHeader>
-                <VacanciesRecommendations className="students__recommendations" />
-                <StudentsPractice />
-                <PartnersBlock />
-                <FilesBlock />
-            </section>
-        </main>
-    </div>
+    <main>
+        <section class="students section">
+            <SectionHeader>Студентам</SectionHeader>
+            <VacanciesRecommendations className="students__recommendations" />
+            <StudentsPractice />
+            <PartnersBlock />
+            <FilesBlock />
+        </section>
+    </main>
 </template>
 
 <script>

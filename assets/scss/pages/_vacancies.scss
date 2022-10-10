@@ -3,7 +3,7 @@
 
 .vacancies {
     .section__header {
-        background-image: url('~/assets/images/section-vacancies.jpg');
+        background-image: url('~/assets/images/section/section-vacancies.jpg');
     }
 
     &__wrapper {
@@ -49,5 +49,19 @@
 
     &__list {
         @include mixins.flex-box($d: column, $g: 30px);
+    }
+
+    &__button {
+        margin-top: 40px;
+        border: 2px solid variables.color('blue');
+        color: variables.color('blue');
+        width: 100%;
+        text-align: center;
+        transition: background-color .4s ease, color .4s ease;
+        
+        &:hover {
+            background-color: variables.color('blue');
+            color: #fff;
+        }
     }
 }

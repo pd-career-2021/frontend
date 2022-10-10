@@ -1,5 +1,4 @@
 <template>
-  <div class="app">
     <main>
       <section class="section vacancies">
         <div class="section__header">
@@ -17,7 +16,6 @@
         </div>
       </section>
     </main>
-  </div>
 </template>
 
 <script>

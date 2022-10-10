@@ -38,25 +38,25 @@
                     </div>
                     <div class="footer__socials">
                         <a href="#" class="footer__social">
-                            <img src="~assets/images/email.svg" alt="email icon">
+                            <img src="~assets/images/footer/email.svg" alt="email icon">
                         </a>
                         <a href="#" class="footer__social">
-                            <img src="~assets/images/vk.svg" alt="vk icon">
+                            <img src="~assets/images/footer/vk.svg" alt="vk icon">
                         </a>
                         <a href="#" class="footer__social">
-                            <img src="~assets/images/yt.svg" alt="youtube icon">
+                            <img src="~assets/images/footer/yt.svg" alt="youtube icon">
                         </a>
                         <a href="#" class="footer__social">
-                            <img src="~assets/images/r.svg" alt="whor icon">
+                            <img src="~assets/images/footer/r.svg" alt="whor icon">
                         </a>
                         <a href="#" class="footer__social">
-                            <img src="~assets/images/unknwn.svg" alt="whois icon">
+                            <img src="~assets/images/footer/unknwn.svg" alt="whois icon">
                         </a>
                         <a href="#" class="footer__social">
-                            <img src="~assets/images/ok.svg" alt="ok icon">
+                            <img src="~assets/images/footer/ok.svg" alt="ok icon">
                         </a>
                         <a href="#" class="footer__social">
-                            <img src="~assets/images/tg.svg" alt="telegram icon">
+                            <img src="~assets/images/footer/tg.svg" alt="telegram icon">
                         </a>
                     </div>
                 </div>

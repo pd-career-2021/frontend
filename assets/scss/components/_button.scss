@@ -30,6 +30,13 @@
         }
     }
 
+    &--reverse {
+        &:hover {
+            background-color: #fff;
+            color: variables.color('dark');
+        }
+    }
+
     &--small {
         padding: 10px 25px;
         font-size: 20px;
@@ -45,6 +52,31 @@
 
     &--clear {
         padding: 0;
+        background-color: transparent;
+
+        &:hover {
+            background-color: transparent;
+        }
+    }
+
+    &--outline {
+        background-color: transparent;
+        border-width: 2px;
+        border-style: solid;
+
+        &.button--blue {
+            border-color: variables.color('blue');
+            color: variables.color('blue');
+
+            transition: box-shadow .3s ease;
+
+            &:hover {
+                background-color: transparent;
+                border-color: variables.color('dark-blue');
+                color: variables.color('dark-blue');
+                box-shadow: 0px 0px 10px variables.color('dark-blue');
+            }
+        }
     }
 }
 
@@ -63,6 +95,14 @@
         background-color: variables.color('dark');
         transition: width .3s ease;
         left: 0;
+    }
+
+    &--white {
+        color: #fff;
+
+        &::after {
+            background-color: #fff;
+        }
     }
 
     &:hover {

@@ -21,14 +21,14 @@
     &__name {
         font-weight: 700;
         font-size: 20px;
-        margin-top: 20px;
-        color: variables.color('dark-blue');
+        margin-top: 15px;
+        color: inherit;
         @include mixins.flex-box($a: center, $g: 5px);
     }
 }
 
 .company-address {
-    margin-top: 45px;
+    margin-top: 15px;
     @include mixins.flex-box($a: center, $g: 8px);
 
     @media (max-width: 768px) {

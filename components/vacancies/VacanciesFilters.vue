@@ -1,6 +1,6 @@
 <template>
     <ul v-if="filters.length" class="vacancies__filters">
-        <li v-for="filter in filters" :key="filter.id" class="vacancies__filter">{{ filter.body }}<span @click="remove(filter.id)" class="vacancies__delete">x</span></li>
+        <li v-for="(value, key, i) in filters" :key="i" class="vacancies__filter">{{ value }}<span class="vacancies__delete">x</span></li>
         <li @click="clear" class="vacancies__filter vacancies__filter--button">Очистить фильтр</li>
     </ul>
 </template>
@@ -8,7 +8,7 @@
 <script>
 export default {
     props: {
-        filters: Array
+        filters: Object
     },
     methods: {
         clear() {

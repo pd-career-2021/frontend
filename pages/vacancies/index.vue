@@ -1,34 +1,29 @@
 <template>
-<div class="app">
-    <main>
-        <section class="section vacancies">
-            <SectionHeader>Вакансии</SectionHeader>
-            <div class="section__content">
-                <div class="container">
-                    <div class="vacancies__wrapper">
-                        <VacanciesOptions @toggle-favorite="toggleFavoriteOptions" :options="options" />
-                        <div class="vacancies__catalogue">
-                            <VacanciesFilters @clear="clearFilters" @remove="removeFilter" :filters="filters" />
-                            <VacanciesList @toggle-favorite="toggleFavoriteVacancy" :vacancies="vacancies" />
-                        </div>
+<main>
+    <section class="section vacancies">
+        <SectionHeader>Вакансии</SectionHeader>
+        <div class="section__content">
+            <div class="container">
+                <div class="vacancies__wrapper">
+                    <VacanciesOptions @toggle-favorite="toggleFavoriteOptions" :options="options" />
+                    <div class="vacancies__catalogue">
+                        <VacanciesFilters @clear="clearFilters" @remove="removeFilter" :filters="filters" />
+                        <VacanciesList @toggle-favorite="toggleFavoriteVacancy" :vacancies="vacancies" />
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
-</div>
+        </div>
+    </section>
+</main>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
     name: 'VacancyPage',
     data() {
         return {
-            filters: [
-                { id: 0, body: 'Маркетинг' },
-                { id: 1, body: 'IT-разработка' },
-                { id: 2, body: 'Не имеет значения' }
-            ],
             vacancies: [
                 {
                     id: 0,
@@ -113,21 +108,32 @@ export default {
             }
         }
     },
+    computed: {
+        ...mapGetters({
+            filters: 'vacancy/filters'
+        })
+    },
+    mounted() {
+        console.log(this.filters)
+    },
     methods: {
-        removeFilter(id) {
-            const index = this.filters.findIndex(element => element.id == id);
-            this.filters.splice(index, 1);
-        },
-        clearFilters() {
-            this.filters = [];
-        },
-        toggleFavoriteVacancy(id) {
-            const index = this.vacancies.findIndex(element => element.id == id);
-            this.vacancies[index].isFavorite = !this.vacancies[index].isFavorite;
-        },
-        toggleFavoriteOptions() {
-            this.options.isFavorite = !this.options.isFavorite;
-        }
+        // removeFilter(id) {
+        //     const index = this.filters.findIndex(element => element.id == id);
+        //     this.filters.splice(index, 1);
+        // },
+        // clearFilters() {
+        //     this.filters = [];
+        // },
+        //
+        //
+        //
+        // toggleFavoriteVacancy(id) {
+        //     const index = this.vacancies.findIndex(element => element.id == id);
+        //     this.vacancies[index].isFavorite = !this.vacancies[index].isFavorite;
+        // },
+        // toggleFavoriteOptions() {
+        //     this.options.isFavorite = !this.options.isFavorite;
+        // }
     },
     head() {
         return {

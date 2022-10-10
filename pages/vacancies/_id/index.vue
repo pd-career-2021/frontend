@@ -1,31 +1,29 @@
 <template>
-<div class="app">
-    <main>
-        <section class="vacancy section">
-            <div class="section__header section__header--center">
-                <div class="container">
-                   <div class="section__row">
-                        <VacancyExcerpt :vacancy="vacancy"/>
-                        <VacancyCompany className="vacancy__company" :company="company"/>
-                   </div>
+<main>
+    <section class="vacancy section">
+        <div class="section__header section__header--center">
+            <div class="container">
+               <div class="section__row">
+                    <VacancyExcerpt :vacancy="vacancy"/>
+                    <VacancyCompany className="vacancy__company" :company="company"/>
+               </div>
+            </div>
+        </div>
+        <div class="section__content">
+            <div class="container">
+                <VacancyDescription :description="description" />
+                <VacancySkills :skills="skills" />
+                <div class="vacancy__chapter">
+                    <h3 class="vacancy__subtitle">Адрес и связь</h3>
                 </div>
             </div>
-            <div class="section__content">
-                <div class="container">
-                    <VacancyDescription :description="description" />
-                    <VacancySkills :skills="skills" />
-                    <div class="vacancy__chapter">
-                        <h3 class="vacancy__subtitle">Адрес и связь</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="vacancy__connection">
-                <VacancyMap />
-                <VacancyForm :socials="socials" />
-            </div>
-        </section>
-    </main>
-</div>
+        </div>
+        <div class="vacancy__connection">
+            <VacancyMap />
+            <VacancyForm :socials="socials" />
+        </div>
+    </section>
+</main>
 </template>
 
 <script>

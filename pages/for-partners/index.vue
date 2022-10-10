@@ -1,24 +1,22 @@
 <template>
-    <div class="app">
-        <main>
-            <section class="partners section">
-                <div class="section__header section__header--partners section__header--custom container">
-                    <h2 class="section__title">
-                        Работодателю
-                        <VacancyCompanyAddress>{{ company.address }}</VacancyCompanyAddress>
-                    </h2>
-                    <div class="section__block">
-                        <VacancyCompany small :company="company"/>
-                        <nuxt-link class="button button--white button--small" to="edit" >Редактировать</nuxt-link>
-                    </div>
+    <main>
+        <section class="partners section">
+            <div class="section__header section__header--partners section__header--custom container">
+                <h2 class="section__title">
+                    Работодателю
+                    <VacancyCompanyAddress>{{ company.address }}</VacancyCompanyAddress>
+                </h2>
+                <div class="section__block">
+                    <VacancyCompany small :company="company"/>
+                    <nuxt-link class="button button--white button--small" to="edit" >Редактировать</nuxt-link>
                 </div>
-                <PartnersAboutBlock :partner="partner" />
-                <PartnersAboutActionsBlock/>
-                <AppLinkLine to="#">Текущие вакансии и стажировки</AppLinkLine>
-                <FilesBlock />
-            </section>
-        </main>
-    </div>
+            </div>
+            <PartnersAboutBlock :partner="partner" />
+            <PartnersAboutActionsBlock/>
+            <AppLinkLine to="#">Текущие вакансии и стажировки</AppLinkLine>
+            <FilesBlock />
+        </section>
+    </main>
 </template>
 
 <script>
@@ -42,6 +40,11 @@ export default {
               tel: '+7999-000-00-00'
           }
       }
+    },
+    head() {
+        return {
+            title: 'Работодателям'
+        }
     }
 }
 </script>

@@ -3,6 +3,11 @@
 
 .recommendation {
     border-left: 24px solid transparent;
+    width: 400px;
+
+    @media (max-width: 990px) {
+        width: 100%;
+    }
 
     &:nth-child(3n) {
         border-left-color: #E63246;
@@ -38,7 +43,6 @@
     &__item-link {
         display: block;
         padding: 15px;
-        width: 400px;
         background-color: #fff;
         color: variables.color('dark');
         transition: color .7s ease-in-out;

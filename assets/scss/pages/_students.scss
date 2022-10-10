@@ -3,7 +3,7 @@
 
 .students {
     .section__header {
-        background-image: url('~/assets/images/section-students.jpg');
+        background-image: url('~/assets/images/section/section-students.jpg');
     }
 
     &__practice {
@@ -16,6 +16,10 @@
     padding: 105px 90px 60px;
     background-color: variables.color('light-bg');
     position: relative;
+
+    @media (max-width: 640px) {
+        padding: 50px 40px 30px;
+    }
 
     &__list {
         @include mixins.flex-box($j: space-between);

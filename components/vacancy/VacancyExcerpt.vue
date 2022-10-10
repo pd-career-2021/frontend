@@ -8,7 +8,7 @@
             </li>
         </ul>
         <div class="vacancy__actions">
-            <a href="#" class="vacancy__action button button--blue">Откликнуться</a>
+            <a href="#" class="vacancy__action button button--reverse button--blue">Откликнуться</a>
             <ButtonFavorite @toggle="vacancy.isFavorite = !vacancy.isFavorite" color="blue" :isFavorite="vacancy.isFavorite" />
         </div>
     </div>
@@ -26,7 +26,3 @@ export default {
     }
 }
 </script>
-
-<style>
-
-</style>

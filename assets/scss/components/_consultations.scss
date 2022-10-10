@@ -1,0 +1,53 @@
+@use '../utilities/mixins';
+@use '../utilities/variables';
+
+.consultations {
+    &__subtitle {
+        margin-top: 20px;
+        font-weight: 700;
+        font-size: 36px;
+        color: variables.color('gray');
+        margin-bottom: 40px;
+    }
+
+    &__list {
+        @include mixins.flex-box($j: space-around, $g: 5px);
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        padding: 20px 50px;
+        height: 90px;
+        width: calc(20% - 4px);
+        @include mixins.flex-box($a: center, $j: center);
+        text-align: center;
+        background-color: #fff;
+        transition: background-color .3s ease, color .3s ease;
+        font-weight: 700;
+        font-size: 20px;
+        cursor: pointer;
+
+        &.active, &:hover {
+            background-color: variables.color('blue');
+            color: #fff;
+        }
+
+        @media (max-width: 990px) {
+            width: calc(33% - 3.33px);
+            padding: 10px 30px;
+        }
+
+        @media (max-width: 640px) {
+            width: calc(50% - 2.5px);
+        }
+    }
+
+    &__actions {
+        margin-top: 50px;
+        @include mixins.flex-box($j: flex-end);
+
+        @media (max-width: 640px) {
+            justify-content: center;
+        }
+    }
+}

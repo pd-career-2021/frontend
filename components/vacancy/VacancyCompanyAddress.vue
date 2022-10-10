@@ -13,7 +13,3 @@ export default {
     name: "VacancyCompanyAddress"
 }
 </script>
-
-<style scoped>
-
-</style>

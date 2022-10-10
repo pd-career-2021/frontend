@@ -74,8 +74,9 @@
     &__bottom {
         @include mixins.flex-box($j: space-between);
 
-        @media (max-width: 576px) {
+        @media (max-width: 640px) {
             flex-wrap: wrap;
+            gap: 20px;
         }
     }
 

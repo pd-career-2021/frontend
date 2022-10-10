@@ -59,7 +59,7 @@
     }
 
     &__actions {
-        @include mixins.flex-box($g: 25px);
+        @include mixins.flex-box($g: 20px);
         
         @media (max-width: 768px) {
             gap: 10px;

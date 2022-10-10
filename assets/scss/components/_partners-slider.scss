@@ -2,14 +2,8 @@
 @use '../utilities/variables';
 
 .partners-slider {
-    &__wrapper {
-        overflow: hidden;
-        margin: 0 160px;
-    }
-
     &__list {
-        @include mixins.flex-box($j: space-between, $g: 50px);
-        transition: transform 1.5s ease;
+        gap: 50px!important;
     }
 
     &__item {
@@ -35,38 +29,5 @@
         max-width: 100%;
         max-height: 100%;
         object-fit: contain;
-    }
-
-    &__navigation {
-        margin-top: 40px;
-        @include mixins.flex-box($j: flex-end, $g: 40px, $a: center);
-    }
-
-    &__pages {
-        font-weight: 600;
-        font-size: 24px;
-    }
-
-    &__count {
-        color: variables.color('gray');
-    }
-
-    &__buttons {
-        @include mixins.flex-box($a: center, $g: 20px);
-    }
-
-    &__button {
-        @include mixins.flex-box($a: center, $j: center);
-        height: 70px;
-        width: 70px;
-        border: 1px solid variables.color('dark');
-        border-radius: 50%;
-        color: variables.color('dark');
-        transition: background-color .3s ease, color .3s ease;
-
-        &:hover {
-            background-color: variables.color('dark');
-            color: #fff;
-        }
     }
 }
