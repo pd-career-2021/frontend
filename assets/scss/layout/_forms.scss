@@ -2,24 +2,54 @@
 @use '../utilities/mixins';
 
 .form {
+    &__field {
+        @include mixins.flex-box($j: space-between);
+
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+    }
+
     &__input {
         padding: 10px 25px;
         font-size: 20px;
 
-        border: none;
+        border: 2px solid rgba(0, 0, 0, .5);
         background: variables.color('white');
         outline: none;
     
         width: 380px;
 
         &::placeholder {
-            color: variables.color('dark');
+            color: variables.color('gray');
         }
 
         @media (max-width: 576px) {
             display: block;
             width: 200px;
         }
+
+        &--fixed {
+            height: 80px;
+            width: 100%;
+        }
+
+        &--textarea {
+            height: 180px;
+            resize: none;
+        }
+
+        &--w-30 {
+            width: calc(30% - 16px);
+        }
+
+        &--w-70 {
+            width: calc(70% - 16px);
+        }
+    }
+
+    &__footer {
+        @include mixins.flex-box($j: flex-end);
     }
 
     &__button {

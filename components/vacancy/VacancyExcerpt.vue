@@ -8,19 +8,14 @@
             </li>
         </ul>
         <div class="vacancy__actions">
-            <a href="#" class="vacancy__action button button--blue">Откликнуться</a>
+            <a href="#" class="vacancy__action button button--reverse button--blue">Откликнуться</a>
             <ButtonFavorite @toggle="vacancy.isFavorite = !vacancy.isFavorite" color="blue" :isFavorite="vacancy.isFavorite" />
         </div>
     </div>
 </template>
 
 <script>
-import ButtonFavorite from '~/components/Buttons/ButtonFavorite';
-
 export default {
-    components: {
-        ButtonFavorite
-    },
     props: {
         vacancy: {
             name: String,
@@ -31,7 +26,3 @@ export default {
     }
 }
 </script>
-
-<style>
-
-</style>

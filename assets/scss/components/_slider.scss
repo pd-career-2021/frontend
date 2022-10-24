@@ -1,0 +1,12 @@
+@use '../utilities/mixins';
+
+.slider {
+    &__wrapper {
+        overflow: hidden;
+    }
+
+    &__list {
+        @include mixins.flex-box($g: 10px, $j: space-between);
+        transition: transform 1s ease;
+    }
+}

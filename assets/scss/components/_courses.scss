@@ -1,0 +1,99 @@
+@use '../utilities/variables';
+@use '../utilities/mixins';
+
+.courses {
+    &__list {
+        gap: 60px;
+
+        @media (max-width: 990px) {
+            gap: 30px;
+        }
+    }
+
+    &__item {
+        min-width: calc(25% - 45px);
+        background-color: #fff;
+        height: 380px;
+        overflow: hidden;
+        position: relative;
+
+        @media (max-width: 990px) {
+            min-width: calc(33% - 20px);
+        }
+
+        @media (max-width: 640px) {
+            min-width: calc(50% - 15px);
+        }
+    }
+
+    &__link {
+        height: 100%;
+        @include mixins.flex-box($d: column);
+        color: variables.color('dark');
+    }
+
+    &__preview {
+        height: 240px;
+        position: relative;
+        z-index: 3;
+    }
+    
+    &__image {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &__content {
+        padding: 10px 20px 20px;
+        position: relative;
+        z-index: 3;
+        height: 100%;
+    }
+
+    &__title {
+        transition: color .3s ease;
+        margin-bottom: 10px;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    &__author {
+        transition: color .3s ease;
+        color: variables.color('gray');
+    }
+
+    &__rating {
+        position: absolute;
+        bottom: 20px;
+    }
+
+    &__price {
+        position: absolute;
+        font-weight: 600;
+        font-size: 24px;
+        color: variables.color('gray');
+        top: -30px;
+        height: 30px;
+        width: 50%;
+        right: 0;
+        background-color: #fff;
+
+        @media (max-width: 990px) {
+            width: 75%;
+        }
+
+        &::before {
+            content: "";
+            height: 60px;
+            width: 60px;
+            display: block;
+            background-color: #fff;
+            position: absolute;
+            left: -30px;
+            bottom: -30px;
+            z-index: -1;
+            border-radius: 50%;
+        }
+    }
+}

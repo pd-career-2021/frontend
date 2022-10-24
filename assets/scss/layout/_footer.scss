@@ -13,6 +13,11 @@
 
     a {
         color: inherit;
+        transition: .3s ease;
+
+        &:hover {
+            color: variables.color('blue');
+        }
     }
 
     &__wrapper {
@@ -69,8 +74,9 @@
     &__bottom {
         @include mixins.flex-box($j: space-between);
 
-        @media (max-width: 576px) {
+        @media (max-width: 640px) {
             flex-wrap: wrap;
+            gap: 20px;
         }
     }
 

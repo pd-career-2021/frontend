@@ -1,0 +1,13 @@
+.link-line {
+    font-weight: 700;
+    font-size: 36px;
+    display: block;
+    padding: 40px 60px;
+    background-color: #fff;
+    transition: background-color .4s ease;
+    color: inherit;
+
+    &:hover {
+        background-color: transparent;
+    }
+}

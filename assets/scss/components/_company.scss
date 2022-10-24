@@ -2,6 +2,8 @@
 @use '../utilities/variables';
 
 .company {
+    @include mixins.flex-box($d: column, $a: flex-end);
+
     &__label {
         font-weight: 700;
         font-size: 20px;
@@ -12,7 +14,6 @@
         height: 230px;
         width: 230px;
         @include mixins.flex-box($j: center, $a: center);
-        margin-bottom: 20px;
         
         background: variables.color('white-bg');
     }
@@ -20,16 +21,17 @@
     &__name {
         font-weight: 700;
         font-size: 20px;
-        color: variables.color('dark-blue');
+        margin-top: 15px;
+        color: inherit;
         @include mixins.flex-box($a: center, $g: 5px);
     }
+}
 
-    &__address {
-        margin-top: 45px;
-        @include mixins.flex-box($a: center, $g: 8px);
+.company-address {
+    margin-top: 15px;
+    @include mixins.flex-box($a: center, $g: 8px);
 
-        @media (max-width: 768px) {
-            margin-top: 20px;
-        }
+    @media (max-width: 768px) {
+        margin-top: 20px;
     }
 }

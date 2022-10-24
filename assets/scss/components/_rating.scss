@@ -1,0 +1,6 @@
+@use '../utilities/mixins';
+
+.rating {
+    @include mixins.flex-box($g: 7px);
+    color: #fbd37d;
+}

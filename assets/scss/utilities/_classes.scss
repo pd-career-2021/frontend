@@ -4,31 +4,14 @@
 
 .container {
     max-width: 100%;
-    margin: 0 auto;
-    padding: 0 10px;
-    
-    @media (min-width: 576px) {
-        max-width: 540px;
-        padding: 0;
+    width: 100%;
+    padding: 0 1.875rem;
+
+    @media (min-width: 640px) {
+        padding: 0 4rem 0 6rem;
     }
 
-    @media (min-width: 768px) {
-        max-width: 720px;
-    }
-
-    @media (min-width: 992px) {
-        max-width: 960px;
-    }
-
-    @media (min-width: 1200px) {
-        max-width: 1140px;
-    }
-
-    @media (min-width: 1400px) {
-        max-width: 1320px;
-    }
-
-    @media (min-width: 1620px) {
-        max-width: 1580px;
+    @media (min-width: 990px) {
+        padding: 0 7.5rem;
     }
 }

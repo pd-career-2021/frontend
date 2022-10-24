@@ -1,12 +1,6 @@
 @use '../utilities/variables';
 @use '../utilities/mixins';
 
-@forward '../layout/forms';
-@forward '../layout/aside';
-
-@forward '../components/company';
-@forward '../components/button';
-
 .vacancy {
     &__wrapper {
         @include mixins.flex-box($j: space-between, $a: center);
@@ -65,7 +59,7 @@
     }
 
     &__actions {
-        @include mixins.flex-box($g: 25px);
+        @include mixins.flex-box($g: 20px);
         
         @media (max-width: 768px) {
             gap: 10px;
@@ -88,8 +82,6 @@
     }
 
     &__company {
-        @include mixins.flex-box($d: column, $a: flex-end);
-
         @media (max-width: 768px) {
             margin-top: 30px;
             align-items: center;

@@ -1,6 +1,5 @@
 <template>
 <div class="events">
-    <TheRightMenu/>
    <header class="header_class">
         <div class="header_title1">Мероприятия</div>
         <div class="header_title2">Какой-то текст</div>
@@ -50,7 +49,6 @@
             </div>
         </div>
     </div>
-    <AppFooter/>
 </div>
 </template>
 

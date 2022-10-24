@@ -1,0 +1,39 @@
+@use '../utilities/mixins';
+@use '../utilities/variables';
+
+.files {
+    &__list {
+        @include mixins.flex-box($d: column, $g: 5px);
+    }
+    
+    &__item {
+        font-weight: 700;
+        font-size: 20px;
+    }
+
+    &__link {
+        @include mixins.flex-box($a: center, $g: 80px);
+        padding: 45px 90px 45px 60px;
+        color: inherit;
+        background-color: #fff;
+
+        transition: background-color .3s ease;
+        
+        &:hover {
+            background-color: transparent;
+        }
+    }
+
+    &__name {
+        max-width: 40%;
+
+        @media (max-width: 990px) {
+            max-width: 90%;
+        }
+    }
+
+    &__props {
+        margin-left: auto;
+        color: variables.color('gray');
+    }
+}

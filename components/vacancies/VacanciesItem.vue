@@ -10,17 +10,18 @@
         </div>
         <p class="vacancy-item__description">{{ vacancy.description }}</p>
         <p class="vacancy-item__pay">От {{ vacancy.pay }} Р</p>
-        <ButtonFavoriteClear @toggle="toggleFavoriteState" :isFavorite="vacancy.isFavorite" />
+        <div class="vacancy-item__actions">
+            <ButtonFavoriteClear v-if="!editable" @toggle="toggleFavoriteState" :isFavorite="vacancy.isFavorite" />
+            <template v-else>
+                <nuxt-link to="#" class="button button--blue button--outline button--small">Редактировать</nuxt-link>
+                <ButtonClose />
+            </template>
+        </div>
     </li>
 </template>
 
 <script>
-import ButtonFavoriteClear from '~/components/Buttons/ButtonFavoriteClear'
-
 export default {
-    components: {
-        ButtonFavoriteClear
-    },
     props: {
         vacancy: {
             id: Number,
@@ -38,6 +39,10 @@ export default {
             description: String,
             pay: String,
             isFavorte: Boolean
+        },
+        editable: {
+            type: Boolean,
+            default: false
         }
     },
     methods: {
@@ -47,7 +52,3 @@ export default {
     }
 }
 </script>
-
-<style>
-
-</style>

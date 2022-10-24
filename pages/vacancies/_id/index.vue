@@ -1,56 +1,45 @@
 <template>
-<div class="app">
-    <TheRightMenu />
-    <main>
-        <section class="vacancy section">
-            <div class="section__header">
-                <div class="container">
-                   <div class="vacancy__wrapper">
-                        <VacancyExcerpt :vacancy="vacancy"/>
-                        <VacancyCompany :company="company"/>
-                   </div>
+<main>
+    <section class="vacancy section">
+        <div class="section__header section__header--center">
+            <div class="container">
+               <div class="section__row">
+                    <VacancyExcerpt :vacancy="vacancy"/>
+                    <VacancyCompany className="vacancy__company" :company="company"/>
+               </div>
+            </div>
+        </div>
+        <div class="section__content">
+            <div class="container">
+                <VacancyDescription :description="description" />
+                <VacancySkills :skills="skills" />
+                <div class="vacancy__chapter">
+                    <h3 class="vacancy__subtitle">Адрес и связь</h3>
                 </div>
             </div>
-            <div class="section__content">
-                <div class="container">
-                    <VacancyDescription :description="description" />
-                    <VacancySkills :skills="skills" />
-                    <div class="vacancy__chapter">
-                        <h3 class="vacancy__subtitle">Адрес и связь</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="vacancy__connection">
-                <VacancyMap />
-                <VacancyForm :socials="socials" />
-            </div>
-        </section>
-    </main>
-    <AppFooter />
-</div>
+        </div>
+        <div class="vacancy__connection">
+            <VacancyMap />
+            <VacancyForm :socials="socials" />
+        </div>
+    </section>
+</main>
 </template>
 
 <script>
-import AppAside from '~/components/AppAside';
-import AppFooter from '~/components/AppFooter';
 
-import VacancyExcerpt from '~/components/Vacancy/VacancyExcerpt';
-import VacancyCompany from '~/components/Vacancy/VacancyCompany';
-import VacancyDescription from '~/components/Vacancy/VacancyDescription';
-import VacancySkills from '~/components/Vacancy/VacancySkills';
-import VacancyMap from '~/components/Vacancy/VacancyMap';
-import VacancyForm from '~/components/Vacancy/VacancyForm';
 
 
 export default {
     name: 'VacancyPage',
-    components: {
-        AppAside, AppFooter, VacancyExcerpt, VacancyCompany, VacancyDescription, VacancySkills, VacancyMap, VacancyForm
-    },
+
     data() {
         return {
             company: {
-                logo: 'https://i.imgur.com/hWq8JCW.png',
+                logo: {
+                    image: 'https://i.imgur.com/hWq8JCW.png',
+                    alt: 'Google logo'
+                },
                 name: 'Google',
                 link: 'https://google.com',
                 address: 'Москва ул. Пушкина дом 14 строение 2'
