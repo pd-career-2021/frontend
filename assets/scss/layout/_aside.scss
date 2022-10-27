@@ -61,3 +61,28 @@
         display: none;
     }
 }
+.aside--open{
+    width: 100vw;
+    height: 100%;
+    padding: 1.5rem 1.5rem;
+    position: fixed;
+    background-color: variables.color('dark');
+    z-index: 100;
+    @include mixins.flex-box($d: column, $a: start);
+    &__menu {
+        padding: 1.5rem 3.5rem;
+        @include mixins.flex-box($d: column, $g: 1.5rem);
+    }
+    &__link {
+        font-size: 36px;
+        font-weight: 700;
+        color: #fff;
+
+        transition: color .3s ease;
+
+        &:hover {
+            color: variables.color('blue');
+        }
+    }
+    
+}
