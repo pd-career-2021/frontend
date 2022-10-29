@@ -8,7 +8,7 @@
                 </h2>
                 <div class="section__block">
                     <VacancyCompany small :company="company"/>
-                    <nuxt-link class="button button--white button--small" to="edit" >Редактировать</nuxt-link>
+                    <nuxt-link class="button button--white button--small" to="for-partners/edit" >Редактировать</nuxt-link>
                 </div>
             </div>
             <PartnersAboutBlock :partner="partner" />
