@@ -15,6 +15,11 @@
                   <div class="form__field">
                       <label for="companyName" class="form__label" hidden>Название компании</label>
                       <input type="text" id="companyName" name="companyName" class="form__input form__input--fixed" placeholder="Введите название компании">
+                    <!-- <FormsFormInput 
+                      v-for="(item, i) in input_data"
+                      :key="i"
+                      v-bind:form_input_data="item"
+                    /> -->
                   </div>
                   <div class="form__field">
                     <label for="companyDescription" class="form__label" hidden>Описание компании</label>
@@ -23,12 +28,12 @@
                   <div class="form__field">
                     <label for="companyEmail" class="form__label" hidden>Электронная почта компании</label>
                     <input type="email" id="companyEmail" name="companyEmail" class="form__input form__input--fixed form__input--w-70" placeholder="Введите электронную почту компании">
-                    <label for="companyPhoto" class="form__label" hidden>Фото компании</label>
-                    <input type="text" id="companyPhoto" name="companyPhoto" class="form__input form__input--fixed form__input--w-30" placeholder="Выберите картинку">
+                    <label for="companyPhoto" class="form__input form__input--fixed form__input--w-30 form__label--file">Фото компании</label>
+                    <input type="file" id="companyPhoto" name="companyPhoto" class="form__input form__input--file form__input--fixed form__input--w-30" placeholder="Выберите картинку">
                   </div>
                   <div class="form__field">
-                    <label for="companyLogo" class="form__label" hidden>Логотип компании</label>
-                    <input type="text" id="companyLogo" name="companyLogo" class="form__input form__input--fixed form__input--w-30" placeholder="Выберите ваш логотип">
+                    <label for="companyLogo" class="form__input form__input--fixed form__input--w-30 form__label--file">Логотип компании</label>
+                    <input type="file" id="companyLogo" name="companyLogo" class="form__input form__input--file form__input--fixed form__input--w-30" placeholder="Выберите ваш логотип">
                     <label for="companyType" class="form__label" hidden>Тип компании</label>
                     <select name="companyType" id="companyType" class="form__input form__input--fixed form__input--w-70">
                           <option value="#" selected disabled>Выберите тип компании</option>
@@ -92,29 +97,23 @@ export default {
     name: "PartnerCompanyEdit",
     data() {
         return {
-            company: {
-                logo: "https://i.imgur.com/hWq8JCW.png",
-                name: "Google",
-                link: "https://google.com",
-                address: "Москва ул. Пушкина дом 14 строение 2"
+          input_data: [
+            {
+              labelName: "companyName",
+              labelText: "Название компании",
+              inputType: "text",
+              inputPlaceholder: "Введите название компании"
+            },
+            {
+              labelName: "companyDescription",
+              labelText: "Описание компании",
+              inputType: "text",
+              inputPlaceholder: "Введите описание компании"
             }
+          ]
         };
     },
     methods: {
-        removeFilter(id) {
-            const index = this.filters.findIndex(element => element.id == id);
-            this.filters.splice(index, 1);
-        },
-        clearFilters() {
-            this.filters = [];
-        },
-        toggleFavoriteVacancy(id) {
-            const index = this.vacancies.findIndex(element => element.id == id);
-            this.vacancies[index].isFavorite = !this.vacancies[index].isFavorite;
-        },
-        toggleFavoriteOptions() {
-            this.options.isFavorite = !this.options.isFavorite;
-        }
     },
     head() {
         return {
