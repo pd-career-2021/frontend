@@ -1,11 +1,20 @@
 <template>
-<div class="app">
-  <h1>ваш код может быть здесь. Страница "Курсы и консультации"</h1>
-</div>
+  <main>
+    <section class="courses section">
+      <SectionHeader>Курсы и консультации</SectionHeader>
+      <HomeConsultationsBlock class="courses-block" />
+      <HomeCoursesWithFiltersBlock />
+    </section>
+  </main>
 </template>
 
 <script>
 export default {
-  name: 'IndexPage',
+  name: 'CoursesPage',
+  head() {
+    return {
+      title: 'Курсы и консультации'
+    }
+  }
 }
 </script>
