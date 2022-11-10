@@ -8,6 +8,21 @@
         &:not(:last-child) {
             margin-bottom: 40px;
         }
+
+        @media (max-width:630px){
+            flex-wrap: wrap;
+            row-gap: 40px;
+        }
+    }
+
+    &_input_container{
+        width:100%;
+    }
+
+    &__label{
+        &--file{
+            color: variables.color('gray');
+        }
     }
 
     &__input {
@@ -41,10 +56,20 @@
 
         &--w-30 {
             width: calc(30% - 16px);
+            @media (max-width:630px) {
+                width: 100%;
+            }
         }
 
         &--w-70 {
             width: calc(70% - 16px);
+            @media (max-width:630px) {
+                width: 100%;
+            }
+        }
+
+        &--file{
+           display: none; 
         }
     }
 
@@ -56,4 +81,29 @@
         padding: 10px 25px!important;
         max-width: max-content;
     }
+
+    &__inscription{
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29px;
+        color: #B8B5BC;
+    }
+
+    &__socials{
+        display:flex;
+        justify-content: start;
+        column-gap: 10px;
+        width:100%;
+        margin-bottom: 40px;
+    }
+
+    &__social_card{
+        padding:15px;
+        background: #FFFFFF;
+
+        @media (max-width:480px){
+            padding: 5px;
+        }
+    }
+
 }
