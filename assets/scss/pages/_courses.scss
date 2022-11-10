@@ -1,0 +1,46 @@
+@use '../utilities/variables';
+@use '../utilities/mixins';
+
+.courses {
+  .section__header {
+    background-image: url('~/assets/images/section/section-courses.jpg');
+    background-position: bottom;
+  }
+}
+
+.courses-block {
+  p {
+    font-weight: 600;
+    font-size: 24px;
+  }
+
+  .section__chapter {
+    margin-bottom: 20px;
+  }
+}
+
+.courses {
+  .row {
+    display: flex;
+
+    .vacancies-options__title {
+      width: auto;
+      margin-right: 30px;
+    }
+
+    .vacancies-options__label {
+      align-self: center;
+    }
+
+    .popular {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .gray {
+      color: #B8B5BC;
+      gap: 50px !important;
+    }
+  }
+}
