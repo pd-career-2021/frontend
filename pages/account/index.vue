@@ -3,10 +3,10 @@
     <section class="account">
       <div class="account__container">
         <div class="form">
-<!--          <EnterHowBlock />-->
+          <EnterHowBlock />
 <!--          <EnterHowStudentBlock />-->
 <!--          <EnterHowPartnerBlock />-->
-          <RegisterHowStudentBlock />
+<!--          <RegisterHowStudentBlock />-->
         </div>
       </div>
     </section>
