@@ -1,0 +1,128 @@
+@use '../utilities/mixins';
+@use '../utilities/variables';
+
+.account {
+  &__container {
+    background: linear-gradient(102.84deg, #606060 12.51%, #343434 83.37%);
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+
+    padding: 5% 0 5% 25%;
+  }
+
+  .form {
+    background: #FFFFFF;
+    border-radius: 25px;
+
+    padding: 50px;
+    width: 66%;
+    height: auto;
+    min-height: 70%;
+
+  }
+}
+
+.enter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+ .line {
+   display: flex;
+   width: 100%;
+   justify-content: center;
+
+   .back {
+     font-weight: 600;
+     font-size: 2.2vh;
+     line-height: 29px;
+     color: #B8B5BC;
+
+   }
+ }
+
+  &__title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    color: #1E1E1E;
+
+    text-align: center;
+    border-bottom: 5px #689EEB solid;
+    margin-bottom: 35px;
+  }
+
+  &__btn{
+    background: #4B6EB9;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    padding: 19px 80px;
+    margin-bottom: 30px;
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    color: #FFFFFF;
+    text-align: center;
+    min-width: 30%;
+
+    border: none;
+  }
+
+  .huge {
+    width: 80%;
+  }
+
+  &__link{
+    border-bottom: 3px #689EEB solid;
+    color: #1E1E1E;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+
+    margin-bottom: 30px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-bottom: 30px;
+
+    label {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 34px;
+
+      color: #B8B5BC;
+    }
+
+    input {
+      padding: 16px 40px;
+      margin-bottom: 30px;
+
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 24px;
+
+      color: #1E1E1E;
+    }
+
+    .password_icon {
+      background: url(~/assets/images/eye.svg) no-repeat scroll 97% 50%;
+    }
+
+    .right {
+      border: 3px solid #55B432;
+    }
+
+    .wrong {
+      border: 3px solid #E63246;
+    }
+  }
+}
+
+
