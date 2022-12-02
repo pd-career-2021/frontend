@@ -38,7 +38,7 @@
      font-size: 2.2vh;
      line-height: 29px;
      color: #B8B5BC;
-
+     
    }
  }
 
@@ -68,6 +68,14 @@
     min-width: 30%;
 
     border: none;
+  }
+
+  &__disappear{
+    display:none;
+  }
+
+  &__appear{
+    display: flex;
   }
 
   .huge {
