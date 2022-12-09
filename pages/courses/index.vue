@@ -10,11 +10,11 @@
 
 <script>
 export default {
-  name: 'CoursesPage',
-  head() {
-    return {
-      title: 'Курсы и консультации'
+    name: 'CoursesPage',
+    head() {
+        return {
+            title: 'Курсы и консультации'
+        }
     }
-  }
 }
 </script>

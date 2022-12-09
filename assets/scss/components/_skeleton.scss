@@ -1,0 +1,40 @@
+.skeleton {
+    position: relative;
+    width: max-content;
+
+    @keyframes move {
+        from {
+            background-position-x: 0;
+        }
+        to {
+            background-position-x: 700px;
+        }
+    }
+
+    &__text {
+        background-image: linear-gradient(90deg, white, #EEEEEE);
+        background-size: 700px 20px;
+        background-position: 0 0;
+        height: 20px;
+        animation: move 2s infinite;
+
+        &--150 {
+            width: 150px;
+        }
+
+        &--400 {
+            width: 400px;
+        }
+
+        &--700 {
+            width: 700px;
+        }
+    }
+
+    &__image {
+        background-image: linear-gradient(90deg, white, #EEEEEE);
+        background-size: 700px 60px;
+        background-position: 0 0;
+        animation: move 2s infinite;
+    }
+}

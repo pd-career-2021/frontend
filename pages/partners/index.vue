@@ -4,7 +4,10 @@
         <SectionHeader>Партнеры и работодатели</SectionHeader>
         <div class="section__content">
             <div class="container">
-              <PartnersEmployersFilters/>
+                <div class="wrapper">
+                    <PartnersEmployersFilters/>
+                    <PartnersEmployersSlider/>
+                </div>
             </div>
         </div>
     </section>
@@ -13,14 +16,20 @@
 
 <script>
 export default {
-  name: 'IndexPage',
+    name: "PartnersPage",
+    head() {
+        return {
+            title: 'Партнеры и работодатели'
+        }
+    },
+    async asyncData({ store, error }) {
+        try {
+            await store.dispatch('partners/loadingPartners');
+        }
+        catch(e) {
+            error({message: e.message, statusCode: e.response.status})
+        }
+
+    }
 }
 </script>
-
-<style lang="scss">
-.partners-employers {
-  .section__header {
-    background-image: url('~/assets/images/section/section-partners-and-employers.jpg');
-  }
-}
-</style>

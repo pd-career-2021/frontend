@@ -36,12 +36,35 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/auth-next'
   ],
+
+  auth: {
+    strategies: {
+      laravelSanctum: {
+        provider: 'laravel/sanctum',
+        url: 'http://career-api.std-1598.ist.mospolytech.ru',
+        endpoints: {
+          login: {
+            url: '/api/login'
+          }
+        }
+      }
+    }
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: '/',
+    baseURL: process.env.API_URL,
+    proxy: true,
+    credentials: true
+  },
+
+  proxy: {
+    '/laravel': {
+    target: 'https://laravel-auth.nuxtjs.app',
+    pathRewrite: { '^/laravel': '/' }
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

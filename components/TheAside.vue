@@ -140,21 +140,30 @@
 
 <script>
 export default {
-  data() {
-    return {
-      open: false,
+    data() {
+        return {
+            open: false,
+        }
+    },
+    methods: {
+        changeAside() {
+            this.open = !this.open
+        },
+        keyUpHandler(event) {
+            if (event.key == 'Escape') this.closeAside();
+        },
+        closeAside() {
+            this.open = false;
+        }
+    },
+    watch: {
+        async "$route"() {
+            this.open = false;
+        },
+    },
+    mounted() {
+        document.addEventListener('keyup', this.keyUpHandler);
     }
-  },
-  methods: {
-    changeAside() {
-      this.open = !this.open
-    },
-  },
-  watch: {
-    async "$route"() {
-      this.open = false;
-    },
-  },
 }
 </script>
 <style scoped>

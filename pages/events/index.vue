@@ -54,7 +54,12 @@
 
 <script>
 export default {
-  name: 'IndexPage',
+    name: 'EventsPage',
+    head() {
+        return {
+            title: 'Мероприятия центра карьеры'
+        }
+    }
 }
 </script>
 <style scoped>

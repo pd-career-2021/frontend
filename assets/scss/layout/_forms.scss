@@ -52,6 +52,7 @@
         &--textarea {
             height: 180px;
             resize: none;
+            font-family: 'Gilroy';
         }
 
         &--w-30 {
@@ -91,7 +92,7 @@
 
     &__socials{
         display:flex;
-        justify-content: start;
+        justify-content: flex-start;
         column-gap: 10px;
         width:100%;
         margin-bottom: 40px;

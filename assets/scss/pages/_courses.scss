@@ -2,10 +2,10 @@
 @use '../utilities/mixins';
 
 .courses {
-  .section__header {
+    .section__header {
     background-image: url('~/assets/images/section/section-courses.jpg');
     background-position: bottom;
-  }
+    }
 }
 
 .courses-block {
@@ -19,28 +19,38 @@
   }
 }
 
-.courses {
-  .row {
-    display: flex;
-
-    .vacancies-options__title {
-      width: auto;
-      margin-right: 30px;
+.courses-filters {
+    &__row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
     }
 
-    .vacancies-options__label {
-      align-self: center;
+    &__title {
+        font-weight: 700;
+        font-size: 36px;
+        margin-right: 30px;
     }
 
-    .popular {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
+    &__select {
+        color: #B8B5BC;
+        font-weight: 600;
+        font-size: 24px;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        height: max-content;
+        cursor: pointer;
     }
 
-    .gray {
-      color: #B8B5BC;
-      gap: 50px !important;
+    &__form {
+        display: flex;
+        gap: 50px;
     }
-  }
+
+    &__button {
+        font-weight: 600;
+        font-size: 24px;
+    }
 }
+    
