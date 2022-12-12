@@ -22,64 +22,17 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+
 export default {
     name: "VacanciesRecommendations",
     props: {
         className: String
     },
-    data() {
-        return {
-            recommendations: [
-                {
-                    id: 0,
-                    name: 'Interaction designer, Geo Automotive',
-                    company: 'Google',
-                    staff: 'Designer. UI/UX',
-                    date: '1 неделю назад',
-                    logo: 'https://i.imgur.com/87lJ2ac.png'
-                },
-                {
-                    id: 1,
-                    name: 'Interaction designer, Geo Automotive',
-                    company: 'Google',
-                    staff: 'Designer. UI/UX',
-                    date: '1 неделю назад',
-                    logo: 'https://i.imgur.com/87lJ2ac.png'
-                },
-                {
-                    id: 2,
-                    name: 'Interaction designer, Geo Automotive',
-                    company: 'Google',
-                    staff: 'Designer. UI/UX',
-                    date: '1 неделю назад',
-                    logo: 'https://i.imgur.com/87lJ2ac.png'
-                },
-                {
-                    id: 3,
-                    name: 'Interaction designer, Geo Automotive',
-                    company: 'Google',
-                    staff: 'Designer. UI/UX',
-                    date: '1 неделю назад',
-                    logo: 'https://i.imgur.com/87lJ2ac.png'
-                },
-                {
-                    id: 4,
-                    name: 'Interaction designer, Geo Automotive',
-                    company: 'Google',
-                    staff: 'Designer. UI/UX',
-                    date: '1 неделю назад',
-                    logo: 'https://i.imgur.com/87lJ2ac.png'
-                },
-                {
-                    id: 5,
-                    name: 'Interaction designer, Geo Automotive',
-                    company: 'Google',
-                    staff: 'Designer. UI/UX',
-                    date: '1 неделю назад',
-                    logo: 'https://i.imgur.com/87lJ2ac.png'
-                }
-            ]
-        }
+    computed: {
+        ...mapGetters({
+            recommendations: 'vacancies/recommendationVacancies'
+        })
     }
 }
 </script>

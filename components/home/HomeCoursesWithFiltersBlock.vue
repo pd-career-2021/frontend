@@ -4,30 +4,8 @@
       <div class="wrapper">
         <h2 class="section__chapter">
           <span>Курсы и вебинары</span>
-<!--          <a class="section__link link" href="#">Все мероприятия</a>-->
         </h2>
-        <div class='row'>
-          <p class="vacancies-options__title">Фильтры</p>
-          <div class='popular gray'>
-            <p class="vacancies-options__label">Компания <img src='~/assets/images/arrow-bottom.svg'></p>
-            <p class='vacancies-options__label'>Область <img src='~/assets/images/arrow-bottom.svg'></p>
-            <p class='vacancies-options__label'>Длительность курса <img src='~/assets/images/arrow-bottom.svg'></p>
-            <p class='vacancies-options__label'>Практика <img src='~/assets/images/arrow-bottom.svg'></p>
-
-          </div>
-        </div>
-        <div class='row'>
-          <p class="vacancies-options__title">Популярное</p>
-          <div class='popular'>
-            <p class="vacancies-options__label">Автоконструирование</p>
-            <p class='vacancies-options__label'>Дизайн</p>
-            <p class='vacancies-options__label'>Управление</p>
-            <p class='vacancies-options__label'>Робототехника</p>
-            <p class='vacancies-options__label'>Беспилотная техника</p>
-            <p class='vacancies-options__label'>Производство</p>
-
-          </div>
-        </div>
+       <HomeCoursesBlockFilters />
         <div class="courses__wrapper">
           <SliderWrapper :length="slides.length" className="courses">
             <SliderItem
@@ -56,9 +34,11 @@
 </template>
 
 <script>
+import HomeCoursesBlockFilters from '@/components/home/HomeCoursesBlockFilters'
 export default {
   name: "HomeCoursesWithFiltersBlock",
-  data() {
+    components: { HomeCoursesBlockFilters },
+    data() {
     return {
       courses: [
         {

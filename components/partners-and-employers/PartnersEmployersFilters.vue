@@ -1,17 +1,14 @@
 <template>
-    <div class="wrapper">
-        <div class="section-filters">
+    <div class="section-filters">
         <h2 class="section-filters__content">
             <span class="section-filters__title">Фильтры</span>
         </h2>
-            <select id="section-filters__select" class="section-filters__select first">
-                <option value=”Companies”>Компания</option>
-            </select>
-            <select id="section-filters__select" class="section-filters__select second">
-                <option value=”region” >Область</option>
-            </select>
-        </div>
-        <PartnersEmployersSlider/>
+        <select id="section-filters__select" class="section-filters__select first">
+            <option value=”Companies”>Компания</option>
+        </select>
+        <select id="section-filters__select" class="section-filters__select second">
+            <option value=”region” >Область</option>
+        </select>
     </div>
 </template>
 

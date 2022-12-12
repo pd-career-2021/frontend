@@ -17,7 +17,7 @@
                         </li>
                     </ul>
                     <div class="consultations__actions">
-                        <button class="consultations__button button">Запланировать</button>
+                        <a href="#" class="consultations__button button">Запланировать</a>
                     </div>
                 </div>
             </div>

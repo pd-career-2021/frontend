@@ -24,7 +24,7 @@ export default {
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: ['~/plugins/vuelidate.js'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -36,14 +36,43 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/auth-next'
   ],
+
+  auth: {
+    strategies: {
+      laravelSanctum: {
+        provider: 'laravel/sanctum',
+        url: 'http://career-api.std-1598.ist.mospolytech.ru',
+        endpoints: {
+          login: {
+            url: '/api/login'
+          }
+        }
+      },
+      local: {
+        endpoints: {
+          login: { url: '/api/login', method: 'post', propertyName: false },
+          user: { url: '/api/user', method: 'get', propertyName: false }
+        },
+        tokenRequired: false,
+        tokenType: false
+      }
+    },
+    localStorage: false,
+    redirect: {
+      login: '/account/auth',
+      home: '/account'
+    }
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: '/',
+    baseURL: process.env.API_URL,
+    credentials: true
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {}
 }

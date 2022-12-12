@@ -68,7 +68,7 @@
     position: fixed;
     background-color: variables.color('dark');
     z-index: 100;
-    @include mixins.flex-box($d: column, $a: start);
+    @include mixins.flex-box($d: column, $a: flex-start);
     &__menu {
         padding: 1.5rem 3.5rem;
         @include mixins.flex-box($d: column, $g: 1.5rem);

@@ -5,8 +5,19 @@
     &__field {
         @include mixins.flex-box($j: space-between);
 
+        &--vertical {
+            flex-direction: column;
+            justify-content: start;
+            gap: 10px;
+        }
+
         &:not(:last-child) {
             margin-bottom: 40px;
+        }
+
+        &--full {
+            width: 100%;
+            margin-bottom: 30px!important;
         }
 
         @media (max-width:630px){
@@ -16,10 +27,14 @@
     }
 
     &_input_container{
-        width:100%;
+        width: 100%;
     }
 
     &__label{
+        color: variables.color('gray');
+        font-size: 20px;
+        font-weight: 700;
+
         &--file{
             color: variables.color('gray');
         }
@@ -52,6 +67,7 @@
         &--textarea {
             height: 180px;
             resize: none;
+            font-family: 'Gilroy';
         }
 
         &--w-30 {
@@ -68,7 +84,7 @@
             }
         }
 
-        &--file{
+        &--file {
            display: none; 
         }
     }
@@ -82,22 +98,22 @@
         max-width: max-content;
     }
 
-    &__inscription{
+    &__inscription {
         font-weight: 600;
         font-size: 24px;
         line-height: 29px;
         color: #B8B5BC;
     }
 
-    &__socials{
+    &__socials {
         display:flex;
-        justify-content: start;
+        justify-content: flex-start;
         column-gap: 10px;
         width:100%;
         margin-bottom: 40px;
     }
 
-    &__social_card{
+    &__social_card {
         padding:15px;
         background: #FFFFFF;
 

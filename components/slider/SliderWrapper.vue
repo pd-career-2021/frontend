@@ -1,6 +1,11 @@
 <template>
     <div class="slider__wrapper">
-        <ul class="slider__list" :class="className + '__list'" :style="currentTransformPosition">
+        <ul
+            class="slider__list"
+            :class="className + '__list'"
+            :style="currentTransformPosition"
+            ref="slider"
+        >
             <slot></slot>
         </ul>
         <Pagination
@@ -25,12 +30,14 @@ export default {
     },
     data() {
         return {
-            currentPage: 0
+            currentPage: 0,
+            width: 1650,
+            gap: 10
         }
     },
     computed: {
         currentTransformPosition() {
-            return 'transform: translate3d(' + (-1650 * this.currentPage) + 'px, 0px, 0px)';
+            return 'transform: translate3d(' + (-this.width * this.currentPage - this.gap * this.currentPage) + 'px, 0px, 0px)';
         },
         countPage() {
             return Math.ceil(this.length / this.limit);
@@ -46,5 +53,10 @@ export default {
             this.currentPage = !this.currentPage ? this.countPage - 1 : this.currentPage - 1;
         }
     },
+    mounted() {
+        this.width = this.$refs.slider.clientWidth;
+        this.gap = Number(window.getComputedStyle(this.$refs.slider).gap.slice(0, -2));
+        console.log(this.gap)
+    }
 }
 </script>

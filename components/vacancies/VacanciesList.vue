@@ -1,8 +1,15 @@
 <template>
     <div>
-        <ul class="vacancies__list">
-            <VacanciesItem :editable="editable" @toggle-favorite="toggleFavoriteState" v-for="vacancy in vacanciesInPage" :key="vacancy.id" :vacancy="vacancy"/>
+        <ul v-if="vacancies.length" class="vacancies__list">
+            <VacanciesItem
+                :editable="editable"
+                @toggle-favorite="toggleFavoriteState"
+                v-for="vacancy in vacanciesInPage"
+                :key="vacancy.id"
+                :vacancy="vacancy"
+            />
         </ul>
+        <p v-else class="vacancies__message">Список вакансий пуст.</p>
         <nuxt-link v-if="editable" to="/account/vacancies/add" class="button button--white vacancies__button">Добавить вакансию</nuxt-link>
         <Pagination
             v-if="hasPagination"
@@ -15,6 +22,8 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
     props: {
         vacancies: Array,
