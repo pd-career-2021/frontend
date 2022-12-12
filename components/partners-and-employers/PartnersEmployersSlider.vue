@@ -31,7 +31,7 @@ export default {
     name: "PartnersEmployersSlider",
     computed: {
         ...mapGetters({
-            partners: 'partners/partnersInSliderFormat'
+            partners: 'partners/partnersInDoubleSliderFormat'
         }),
         slides() {
             return this.partners.concat(this.partners.slice(1, 4 - this.partners.length % 5));

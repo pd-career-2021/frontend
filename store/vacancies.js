@@ -19,7 +19,9 @@ export const state = () => ({
 })
 
 export const getters = {
-
+    recommendationVacancies(state) {
+        return state.vacancies.slice(0, 6);
+    }
 }
 
 export const mutations = {
@@ -57,7 +59,7 @@ export const mutations = {
 export const actions = {
     async loadingVacancies({commit}) {
         try {
-            const vacancies = await this.$axios.$get('/vacancies');
+            const vacancies = await this.$axios.$get('/api/vacancies');
 
             commit('setVacancies', vacancies);
         } catch {
@@ -67,7 +69,7 @@ export const actions = {
 
     async loadingPartnerVacancies({commit}, partner_id) {
         try {
-            let vacancies = await this.$axios.$get('/vacancies');
+            let vacancies = await this.$axios.$get('/api/vacancies');
 
             vacancies = vacancies.filter(vacancy => vacancy.employer_id === partner_id);
 
@@ -94,7 +96,7 @@ export const actions = {
                 employer_id: 8
             }
 
-            await this.$axios.$post('/vacancies');
+            await this.$axios.$post('/api/vacancies');
         } catch(e) {
 
         }

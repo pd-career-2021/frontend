@@ -11,7 +11,7 @@
                 :url="slide.url"
                 className="partners-slider"
             >
-                <img :src="slide.preview" alt="partner name temp" class="partners-slider__image">
+                <img :src="slide.image" alt="partner name temp" class="partners-slider__image">
             </SliderItem>
         </SliderWrapper>
     </div>
@@ -19,79 +19,19 @@
 
 <script>
 
+import { mapGetters } from 'vuex';
+
 export default {
     name: "PartnersSlider",
     data() {
         return {
-            partners: [
-                {
-                    url: '#',
-                    preview: '/images/partners/kia.png'
-                },
-                {
-                    url: '#',
-                    preview: '/images/partners/bmw.png'
-                },
-                {
-                    url: '#',
-                    preview: '/images/partners/cisco.png'
-                },
-                {
-                    url: '#',
-                    preview: '/images/partners/1c.png'
-                },
-                {
-                    url: '#',
-                    preview: '/images/partners/kia.png'
-                },
-                {
-                    url: '#',
-                    preview: '/images/partners/bmw.png'
-                },
-                {
-                    url: '#',
-                    preview: '/images/partners/cisco.png'
-                },
-                {
-                    url: '#',
-                    preview: '/images/partners/1c.png'
-                },
-                {
-                    url: '#',
-                    preview: '/images/partners/kia.png'
-                },
-                {
-                    url: '#',
-                    preview: '/images/partners/bmw.png'
-                },
-                {
-                    url: '#',
-                    preview: '/images/partners/cisco.png'
-                },
-                {
-                    url: '#',
-                    preview: '/images/partners/1c.png'
-                },
-                {
-                    url: '#',
-                    preview: '/images/partners/kia.png'
-                },
-                {
-                    url: '#',
-                    preview: '/images/partners/bmw.png'
-                },
-                {
-                    url: '#',
-                    preview: '/images/partners/cisco.png'
-                },
-                {
-                    url: '#',
-                    preview: '/images/partners/1c.png'
-                }
-            ]
+
         }
     },
     computed: {
+        ...mapGetters({
+            partners: 'partners/partnersInSliderFormat'
+        }),
         slides() {
             return this.partners.concat(this.partners.slice(0, 5 - this.partners.length % 5));
         }

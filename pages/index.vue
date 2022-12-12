@@ -45,6 +45,18 @@ export default {
         return {
             title: 'Центр Карьеры'
         }
+    },
+    async asyncData({ store, error, axios }) {
+        try {
+            await Promise.all([
+                store.dispatch('partners/loadingPartners'),
+                store.dispatch('vacancies/loadingVacancies')
+            ]);
+        }
+        catch(e) {
+            error({message: e.message, statusCode: e.response.status});
+        }
+
     }
 }
 </script>
