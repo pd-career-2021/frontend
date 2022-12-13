@@ -13,73 +13,63 @@
             <div class="wrapper">
               <form action="#" class="form">
                   <div class="form__field">
-                      <label for="companyName" class="form__label" hidden>Название компании</label>
-                      <input type="text" id="companyName" name="companyName" class="form__input form__input--fixed" placeholder="Введите название компании">
-                    <!-- <FormsFormInput 
-                      v-for="(item, i) in input_data"
+                    <FormsFormInput 
+                      v-for="(item, i) in input_data.slice(0,1)"
                       :key="i"
                       v-bind:form_input_data="item"
-                    /> -->
+                    />
                   </div>
                   <div class="form__field">
-                    <label for="companyDescription" class="form__label" hidden>Описание компании</label>
-                    <textarea type="text" id="companyDescription" name="companyDescription" class="form__input form__input--fixed form__input--textarea" placeholder="Введите описание компании"></textarea>
+                    <FormsTextareaInput
+                      v-for="(item, i) in input_data.slice(1,2)"
+                      :key="i"
+                      v-bind:form_input_data="item"
+                    />
                   </div>
                   <div class="form__field">
-                    <label for="companyEmail" class="form__label" hidden>Электронная почта компании</label>
-                    <input type="email" id="companyEmail" name="companyEmail" class="form__input form__input--fixed form__input--w-70" placeholder="Введите электронную почту компании">
-                    <label for="companyPhoto" class="form__input form__input--fixed form__input--w-30 form__label--file">Фото компании</label>
-                    <input type="file" id="companyPhoto" name="companyPhoto" class="form__input form__input--file form__input--fixed form__input--w-30" placeholder="Выберите картинку">
+                    <FormsFormInput 
+                      v-for="(item, i) in input_data.slice(2,3)"
+                      :key="i"
+                      v-bind:form_input_data="item"
+                      class="form__input--w-70"
+                    />
+                    <FormsFileInput 
+                      v-for="(item, i) in input_data.slice(3,4)"
+                      :key="i"
+                      v-bind:form_input_data="item"
+                      class="form__input--w-30"
+                    />
                   </div>
                   <div class="form__field">
-                    <label for="companyLogo" class="form__input form__input--fixed form__input--w-30 form__label--file">Логотип компании</label>
-                    <input type="file" id="companyLogo" name="companyLogo" class="form__input form__input--file form__input--fixed form__input--w-30" placeholder="Выберите ваш логотип">
-                    <label for="companyType" class="form__label" hidden>Тип компании</label>
-                    <select name="companyType" id="companyType" class="form__input form__input--fixed form__input--w-70">
-                          <option value="#" selected disabled>Выберите тип компании</option>
-                          <option value="#">1</option>
-                          <option value="#">2</option>
-                          <option value="#">3</option>
-                    </select>
+                    <FormsFileInput 
+                      v-for="(item, i) in input_data.slice(4,5)"
+                      :key="i"
+                      v-bind:form_input_data="item"
+                      class="form__input--w-30"
+                    />
+                    <FormsSelectInput 
+                      v-for="(item, i) in input_data.slice(5,6)"
+                      :key="i"
+                      v-bind:form_input_data="item"
+                      class="form__input--w-70"
+                    />
                   </div>
                   <div class="form__field">
-                      <label for="companyAddress" class="form__label" hidden>Адрес компании</label>
-                      <input type="text" id="companyAddress" name="companyAddress" class="form__input form__input--fixed" placeholder="Укажите адрес">
+                      <FormsFormInput 
+                      v-for="(item, i) in input_data.slice(6,7)"
+                      :key="i"
+                      v-bind:form_input_data="item"
+                      />
                   </div>
                   <div class="form__field">
                     <p class="form__inscription">Вы можете указать свои социальные сети</p>
                   </div>
                   <div class="form__socials">
-                    <div class="form__social_card">
-                      <a href="#">
-                          <img src="~assets/images/vk.svg" alt="vk icon">
-                      </a>
-                    </div>  
-                    <div class="form__social_card">
-                      <a href="#">
-                          <img src="~assets/images/mail.svg" alt="mail icon">
-                      </a>
-                    </div>
-                    <div class="form__social_card">
-                      <a href="#">
-                          <img src="~assets/images/google.svg" alt="google icon">
-                      </a>
-                    </div>
-                    <div class="form__social_card">
-                      <a href="#">
-                          <img src="~assets/images/vk.svg" alt="vk icon">
-                      </a>
-                    </div>  
-                    <div class="form__social_card">
-                      <a href="#">
-                          <img src="~assets/images/mail.svg" alt="mail icon">
-                      </a>
-                    </div>
-                    <div class="form__social_card">
-                      <a href="#">
-                          <img src="~assets/images/google.svg" alt="google icon">
-                      </a>
-                    </div>
+                    <FormsSocialInput 
+                      v-for="(item, i) in social_data"
+                      :key="i"
+                      v-bind:social_input_data="item"
+                      />
                   </div>
                   <div class="form__footer">
                       <button class="button">Сохранить</button>
@@ -109,7 +99,69 @@ export default {
               labelText: "Описание компании",
               inputType: "text",
               inputPlaceholder: "Введите описание компании"
-            }
+            },
+            {
+              labelName: "companyEmail",
+              labelText: "Электронная почта компании",
+              inputType: "email",
+              inputPlaceholder: "Введите электронную почту компании"
+            },
+            {
+              labelName: "companyPhoto",
+              labelText: "Логотип компании",
+              inputType: "file",
+              inputPlaceholder: "Выберите картинку"
+            },
+            {
+              labelName: "companyLogo",
+              labelText: "Фото компании",
+              inputType: "file",
+              inputPlaceholder: "Выберите ваш логотип"
+            },
+            {
+              labelName: "companyType",
+              labelText: "Тип компании",
+              optionText1:"Выберите тип компании",
+              optionValue1: "#",
+              optionText2: "1",
+              optionValue2: "#",
+              optionText3: "2",
+              optionValue3: "#",
+              optionText4: "3",
+              optionValue4: "#",
+            },
+            {
+              labelName: "companyAddress",
+              labelText: "Адрес компании",
+              inputType: "text",
+              inputPlaceholder: "Укажите адрес"
+            }            
+          ],
+          social_data:[
+            {
+              socialLink: "#",
+              socialIcon: require('assets/images/vk.svg')
+            },
+            {
+              socialLink: "#",
+              socialIcon: require('assets/images/mail.svg')
+            },
+            {
+              socialLink: "#",
+              socialIcon: require('assets/images/google.svg')
+            },
+            {
+              socialLink: "#",
+              socialIcon: require('assets/images/vk.svg')
+            },
+            {
+              socialLink: "#",
+              socialIcon: require('assets/images/mail.svg')
+            },
+            {
+              socialLink: "#",
+              socialIcon: require('assets/images/google.svg')
+            },
           ]
         };
     },
